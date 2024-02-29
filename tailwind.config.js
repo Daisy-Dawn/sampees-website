@@ -12,8 +12,11 @@ export default {
         blossom: '#7E212C',
         bark: '#321e17',
       },
-    },
-    
+      fontFamily: {
+        mont: ['Montserrat', 'sans-serif'],
+        merri: ['Merriweather', 'serif'],
+      },
+    },    
   },
   plugins: [],
 }
