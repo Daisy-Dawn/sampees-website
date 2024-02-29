@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        silver: '#CCD3D9',
+        petal: '#FED5D9',
+        blossom: '#7E212C',
+        bark: '#321e17',
+      },
+    },
+    
   },
   plugins: [],
 }
