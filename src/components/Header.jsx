@@ -27,9 +27,9 @@ const Header = () => {
         },
     ]
 
-    
+    // header-bg
   return (
-    <nav className={`w-full h-[14dvh] sticky top-0 left-0 z-50 bg-[#F8F9FA] shadow-sm transition-all duration-300 overflow-x-clip`}>
+    <nav className={`w-full h-[14dvh] sticky top-0 left-0 z-50 bg-[#F8F9FA]  shadow-xl transition-all duration-300 overflow-x-clip`}>
       <div className="flex justify-between items-center h-full mx-12">
           <div className="w-16 h-auto">
               <a href="/">
