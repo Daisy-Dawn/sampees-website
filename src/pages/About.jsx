@@ -339,7 +339,7 @@ const About = () => {
       </div>
 
       {/* Quality Certifications: Ensuring Standards and Compliance */}
-      <div className='bg-[#F8F9FA] px-[1rem] 2xl:px-[9rem] lg:px-[3rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center gap-[3rem]'>
+      <div className='bg-[#F8F9FA] px-[1rem] 2xl:px-[9rem] lg:px-[3rem] py-[4rem] xl:py-[6rem] grid md:grid-cols-2 grid-cols-1 items-center gap-[3rem]'>
         <div className='flex gap-[1.7rem] flex-col '>
           <div className='flex gap-[1.5rem] items-center'>
             <img src={icon_label} alt='' />

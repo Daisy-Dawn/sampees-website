@@ -7,6 +7,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { logo } from "../assets";
 
 const Footer = () => {
   const navLinks = [
@@ -34,7 +35,7 @@ const Footer = () => {
         {/* brand group */}
         <div className="flex-[2]">
           <div>
-            LOGO {/* <img src="#" alt="sampee logo" /> */}
+             <img className="w-[60px] h-auto object-cover" src={logo} alt="sampee logo" />
           </div>
           <h3 className="text-base text-[#77808B] my-4">Sampees Global Resources Limited, a distinguished entity in the bakery and confectionery sector, 
             is officially registered with the Corporate Affairs Commission (CAC).
