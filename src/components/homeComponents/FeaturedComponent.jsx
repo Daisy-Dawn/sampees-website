@@ -14,6 +14,7 @@ const FeaturedComponent = ({image, header, body}) => {
                 src={image}
                 className="w-full h-full object-cover"
                 alt="product" 
+                loading="lazy"
             />
         </div>
         <h4 className="h-[4rem] text-lg font-normal font-mont capitalize text-center mt-2">{header}</h4>

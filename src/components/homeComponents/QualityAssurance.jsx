@@ -9,6 +9,7 @@ const QualityAssurance = () => {
             src={nafdac} 
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[24rem] -z-10 opacity-10"
             alt="nafdac logo" 
+            loading="lazy"
           />
           <div className="flex gap-1 md:max-w-[50%]">
               <span className="text-sm font-semibold font-poppins text-[#7e212c] mt-2">01</span>

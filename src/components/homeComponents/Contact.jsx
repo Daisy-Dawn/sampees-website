@@ -9,6 +9,7 @@ const Contact = () => {
             src={cta} 
             className="absolute w-full h-full object-cover top-0 left-0 -z-10"
             alt="linear background" 
+            loading="lazy"
         />
 
         {/* cta container */}
