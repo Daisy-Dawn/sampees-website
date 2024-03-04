@@ -37,7 +37,7 @@ const QualityAssurance = () => {
             {/* nafdac image */}
           <img 
             src={nafdac} 
-            className="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] w-full max-w-[24rem] -z-10 opacity-10"
+            className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] w-full max-w-[24rem] -z-10 opacity-10"
             alt="nafdac logo" 
             loading="lazy"
           />
