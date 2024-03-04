@@ -9,7 +9,7 @@ const Contact = () => {
         navigate("/contact-us");
     }
   return (
-    <section className="relative flex justify-center p-10 md:p-12 mt-24">
+    <section className="relative flex justify-center p-10 md:p-12 mt-24 z-20">
         {/* background image */}
         <img 
             src={hamburger} 

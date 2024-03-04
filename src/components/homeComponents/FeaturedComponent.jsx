@@ -17,7 +17,7 @@ const FeaturedComponent = ({image, header, body}) => {
                 loading="lazy"
             />
         </div>
-        <h4 className="h-[4rem] text-lg font-normal font-mont capitalize text-center mt-2">{header}</h4>
+        <h4 className="h-[4rem] text-lg font-medium font-mont capitalize text-center mt-2">{header}</h4>
         <p className="text-base font-normal font-poppins my-2 text-center">{body}</p>
         <div className="text-center">
             <Button title="View More" action={handleNavigationToProductPage} />

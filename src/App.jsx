@@ -1,94 +1,84 @@
-import Layout from "./layout/Layout"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
-import Products from "./pages/Products"
-import NoPage from "./pages/NoPage"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import SkeletonComp from "./pages/SkeletonComp"
-import { lazy, Suspense } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './layout/Layout'
+import PreLoader from './pages/PreLoader'
+import Skeleton from './pages/Skeleton'
+// import { Skeleton } from '@mui/material'
 
-const LazyAbout = lazy(() => import('./pages/About'))
-const LazyHome = lazy(() => import('./pages/Home'))
-const LazyContact = lazy(() => import('./pages/Contact'))
-const LazyProducts = lazy(() => import('./pages/Products'))
-const LazyNoPage = lazy(() => import('./pages/NoPage'))
-
+// Lazy load your pages
+const LazyHome = React.lazy(() => import('./pages/Home'))
+const LazyAbout = React.lazy(() => import('./pages/About'))
+const LazyContact = React.lazy(() => import('./pages/Contact'))
+const LazyProducts = React.lazy(() => import('./pages/Products'))
+const LazyNoPage = React.lazy(() => import('./pages/NoPage'))
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
-        path: "",
+        path: '',
         element: (
-          <Suspense
-            fallback={
-              <SkeletonComp/>
-            }
-          >
+          <Suspense fallback={<PreLoader />}>
             <LazyHome />
           </Suspense>
         )
-        // element: <Home />,
       },
       {
-        path: "about-us",
+        path: 'about-us',
         element: (
-          <Suspense
-            fallback={
-              <SkeletonComp/>
-            }
-          >
+          <Suspense fallback={<PreLoader />}>
             <LazyAbout />
           </Suspense>
         )
       },
       {
-        path: "contact-us",
+        path: 'contact-us',
         element: (
-          <Suspense
-            fallback={
-              <SkeletonComp/>
-            }
-          >
+          <Suspense fallback={<PreLoader />}>
             <LazyContact />
           </Suspense>
         )
       },
       {
-        path: "our-products",
+        path: 'our-products',
         element: (
-          <Suspense
-            fallback={
-              <SkeletonComp/>
-            }
-          >
+          <Suspense fallback={<PreLoader />}>
             <LazyProducts />
           </Suspense>
         )
       },
       {
-        path: "*",
+        path: '*',
         element: (
-          <Suspense
-            fallback={
-              <SkeletonComp/>
-            }
-          >
+          <Suspense fallback={<PreLoader />}>
             <LazyNoPage />
           </Suspense>
         )
-      },
+      }
     ]
   }
 ])
 
-function App() {
+function App () {
+  const [loading, setLoading] = useState(true)
+
+  // Set loading to false once the main component mounts
+  // This will happen automatically without the need for a useEffect hook
+  // since it's the initial state
+  setTimeout(() => {
+    setLoading(false);
+  }, 5000); // Simulated loading time: 1 second
 
   return (
-    <RouterProvider router={router} />
+    <div className="app">
+      {loading ? (
+        <Skeleton />
+      ) : (
+        <RouterProvider router={router}></RouterProvider>
+      )}
+    </div>
   )
 }
 
