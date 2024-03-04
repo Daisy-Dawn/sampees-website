@@ -105,7 +105,7 @@ const Products = () => {
             key={index}
             src={image}
             alt='sampees products'
-            className='h-full w-full object-cover'
+            className='h-full skeleton w-full object-cover'
           />
         ))}
       </Carousel>

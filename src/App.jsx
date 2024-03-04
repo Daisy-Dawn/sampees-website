@@ -5,6 +5,14 @@ import Contact from "./pages/Contact"
 import Products from "./pages/Products"
 import NoPage from "./pages/NoPage"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import SkeletonComp from "./pages/SkeletonComp"
+import { lazy, Suspense } from 'react'
+
+const LazyAbout = lazy(() => import('./pages/About'))
+const LazyHome = lazy(() => import('./pages/Home'))
+const LazyContact = lazy(() => import('./pages/Contact'))
+const LazyProducts = lazy(() => import('./pages/Products'))
+const LazyNoPage = lazy(() => import('./pages/NoPage'))
 
 
 const router = createBrowserRouter([
@@ -14,23 +22,64 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Home />,
+        element: (
+          <Suspense
+            fallback={
+              <SkeletonComp/>
+            }
+          >
+            <LazyHome />
+          </Suspense>
+        )
+        // element: <Home />,
       },
       {
         path: "about-us",
-        element: <About />,
+        element: (
+          <Suspense
+            fallback={
+              <SkeletonComp/>
+            }
+          >
+            <LazyAbout />
+          </Suspense>
+        )
       },
       {
         path: "contact-us",
-        element: <Contact />,
+        element: (
+          <Suspense
+            fallback={
+              <SkeletonComp/>
+            }
+          >
+            <LazyContact />
+          </Suspense>
+        )
       },
       {
         path: "our-products",
-        element: <Products />,
+        element: (
+          <Suspense
+            fallback={
+              <SkeletonComp/>
+            }
+          >
+            <LazyProducts />
+          </Suspense>
+        )
       },
       {
         path: "*",
-        element: <NoPage />,
+        element: (
+          <Suspense
+            fallback={
+              <SkeletonComp/>
+            }
+          >
+            <LazyNoPage />
+          </Suspense>
+        )
       },
     ]
   }

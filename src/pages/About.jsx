@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AboutButton from '../components/AboutButton'
 import {
   CEO,
@@ -10,7 +10,8 @@ import {
   machine3,
   machine4,
   nafdac,
-  staffs
+  staffs,
+  building1
 } from '../assets'
 import {
   Accordion,
@@ -18,6 +19,7 @@ import {
   AccordionBody
 } from '@material-tailwind/react'
 import { FaMinus, FaPlus } from 'react-icons/fa'
+import LazyLoad from 'react-lazy-load'
 
 const CUSTOM_ANIMATION = {
   mount: { scale: 1 },
@@ -26,6 +28,7 @@ const CUSTOM_ANIMATION = {
 
 const About = () => {
   const [open, setOpen] = React.useState(0)
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   const handleOpen = index =>
     setOpen(prevIndex => (prevIndex === index ? null : index))
@@ -92,7 +95,7 @@ const About = () => {
   return (
     <div className=''>
       {/* HERO */}
-      <div className='flex flex-col about-img'>
+      <div className='flex flex-col skeleton about-img'>
         <div className='h-full w-full xl:w-2/3 2xl:w-1/2 px-[1rem] lg:px-[4rem] flex gap-7 flex-col justify-center'>
           <div className='flex items-center gap-[1rem] lg:gap-[2rem]'>
             <div className='w-[0.375rem] h-[6.25rem] border-stroke '></div>
@@ -131,12 +134,16 @@ const About = () => {
       {/* COMPANY HISTORY */}
       <div className='bg-[#F8F9FA] px-[1rem] lg:px-[3rem] 2xl:px-[9rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center md:gap-[1.5rem] lg:gap-[3rem] gap-[3rem]'>
         <div className='lg:h-[40rem] md:h-full h-[21rem]'>
-          <img className='w-full h-full object-cover' src={building} alt='' />
+          <img
+            className='w-full h-full skeleton object-cover'
+            src={building1}
+            alt=''
+          />
         </div>
 
         <div className='flex gap-[1.7rem] flex-col '>
           <div className='flex gap-[1.5rem] items-center'>
-            <img src={icon_label} alt='' />
+            <img className='skeleton' src={icon_label} alt='' />
             <h2 className='text-bark font-poppins text-[1rem] lg:text-[1.3rem] capitalize font-medium'>
               About us
             </h2>
@@ -171,7 +178,7 @@ const About = () => {
       <div className='bg-[#F8F9F] px-[1rem] 2xl:px-[9rem] lg:px-[3rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center gap-[3rem]'>
         <div className='flex gap-[1.7rem] flex-col '>
           <div className='flex gap-[1.5rem] items-center'>
-            <img src={icon_label} alt='' />
+            <img className='skeleton' src={icon_label} alt='' />
             <h2 className='text-bark font-poppins text-[1rem] lg:text-[1.3rem] capitalize font-medium'>
               About us
             </h2>
@@ -215,7 +222,7 @@ const About = () => {
         <div className=' flex flex-col'>
           <div className='md:h-[23rem] h-[11rem] '>
             <img
-              className='w-full h-full rounded-[10px] border-2 border-white object-cover'
+              className='w-full h-full skeleton rounded-[10px] border-2 border-white object-cover'
               src={CEO}
               alt=''
             />
@@ -225,7 +232,7 @@ const About = () => {
           </p>
           <div className='md:h-[23rem] h-[11rem] '>
             <img
-              className='w-full h-full rounded-[10px] border-2 border-white object-cover '
+              className='w-full h-full skeleton rounded-[10px] border-2 border-white object-cover '
               src={staffs}
               alt=''
             />
@@ -241,28 +248,28 @@ const About = () => {
         <div className='grid order-2 lg:order-1 grid-cols-2 '>
           <div className='h-[10rem] md:h-[23rem]'>
             <img
-              className='w-full h-full object-cover md:border-[7px] border-4 border-white'
+              className='w-full h-full skeleton object-cover md:border-[7px] border-4 border-white'
               src={machine1}
               alt=''
             />
           </div>
           <div className='h-[10rem] md:h-[23rem]'>
             <img
-              className='w-full h-full object-cover md:border-[7px] border-4 border-white'
+              className='w-full h-full object-cover skeleton md:border-[7px] border-4 border-white'
               src={machine2}
               alt=''
             />
           </div>
           <div className='h-[10rem] md:h-[23rem] col-span-2'>
             <img
-              className='w-full h-full object-cover md:border-[7px] border-4 border-white'
+              className='w-full h-full object-cover skeleton md:border-[7px] border-4 border-white'
               src={machine3}
               alt=''
             />
           </div>
           <div className='h-[10rem] md:h-[23rem]'>
             <img
-              className='w-full h-full object-cover md:border-[7px] border-4 border-white'
+              className='w-full h-full object-cover skeleton md:border-[7px] border-4 border-white'
               src={machine4}
               alt=''
             />
@@ -271,7 +278,7 @@ const About = () => {
 
         <div className='flex gap-[1.7rem] flex-col '>
           <div className='flex gap-[1.5rem] items-center'>
-            <img src={icon_label} alt='' />
+            <img className='skeleton' src={icon_label} alt='' />
             <h2 className='text-bark font-poppins text-[1rem] lg:text-[1.3rem] capitalize font-medium'>
               About us
             </h2>
@@ -342,7 +349,7 @@ const About = () => {
       <div className='bg-[#F8F9FA] px-[1rem] 2xl:px-[9rem] lg:px-[3rem] py-[4rem] xl:py-[6rem] grid md:grid-cols-2 grid-cols-1 items-center gap-[3rem]'>
         <div className='flex gap-[1.7rem] flex-col '>
           <div className='flex gap-[1.5rem] items-center'>
-            <img src={icon_label} alt='' />
+            <img className='skeleton' src={icon_label} alt='' />
             <h2 className='text-bark font-poppins text-[1rem] lg:text-[1.3rem] capitalize font-medium'>
               About us
             </h2>
@@ -402,8 +409,15 @@ const About = () => {
         </div>
 
         <div className='flex justify-center sm:h-[20rem] md:h-auto flex-col items-center'>
-          <img className='w-full h-full object-cover ' src={nafdac} alt='' />
-          {/* <p className='text-blossom font-medium text-[1.3rem] mt-[1rem] mb-[1.5rem] font-poppins'>NAFDAC Registration Number: </p> */}
+          <LazyLoad offset={300}>
+            <img
+              className='w-full h-full object-cover '
+              src={nafdac}
+              alt=''
+              onLoad={() => setImageLoaded(true)} // Set imageLoaded state to true when the image is loaded
+            />
+          </LazyLoad>
+          {!imageLoaded && <div className='skeleton'></div>}{' '}
         </div>
       </div>
 
