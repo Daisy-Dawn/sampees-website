@@ -3,7 +3,7 @@ import Button from "../Button";
 
 const Contact = () => {
   return (
-    <section className="relative flex justify-center p-12 mt-24">
+    <section className="relative z-20 flex justify-center p-12 mt-24">
         {/* background image */}
         <img 
             src={hamburger} 
