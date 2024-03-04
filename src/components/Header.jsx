@@ -4,6 +4,7 @@ import Button from "./Button";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { logo } from "../assets";
 
 
 const Header = () => {
@@ -33,8 +34,8 @@ const Header = () => {
       <div className="flex justify-between items-center h-full mx-12">
           <div className="w-16 h-auto">
               <a href="/">
-                LOGO
-                  {/* <img src={advertLogo} className="w-full h-auto object-cover" alt="brand logo" /> */}
+                {/* LOGO */}
+                  <img src={logo} className="w-full h-auto object-cover" alt="brand logo" />
               </a>
           </div>
 
