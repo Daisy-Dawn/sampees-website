@@ -21,9 +21,10 @@ import milkflavorCarton from '../assets/products/milkflavorCarton.png'
 import danobig from '../assets/products/danobig.png'
 import danosmall from '../assets/products/danosmall.png'
 import logo from '../assets/logo.png'
+import building1 from '../assets/about/building1.png'
 
 export {
     building, icon_label, staffs, CEO, machine1, machine2, machine3, machine4,nafdac,faqIcon,
     chinChinCarton,chinChinlabel,milk1,milklabel,milklabelsealed,milkproduct,milkproduct1,
-    vanillalabel,vanillaproduct,milkflavorCarton,danobig,danosmall,logo,
+    vanillalabel,vanillaproduct,milkflavorCarton,danobig,danosmall,logo,building1,
 }
