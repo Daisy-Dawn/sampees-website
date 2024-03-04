@@ -6,7 +6,7 @@ import machine from "../../assets/home/machine3.png";
 
 const QualityAssurance = () => {
   return (
-    <section className="relative flex flex-col items-center p-12 mt-24">
+    <section className="relative flex flex-col items-center p-10 md:p-12 mt-24">
         {/* first blob vector */}
         <img src={vector2} className="opacity-50w-full max-w-[4rem] right-0 top-0 absolute" alt="blob2" />
         {/* Heading */}

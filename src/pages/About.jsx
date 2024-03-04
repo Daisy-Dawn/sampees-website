@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import AboutButton from '../components/AboutButton'
+import React, { useState } from 'react';
+import AboutButton from '../components/AboutButton';
+import { useNavigate } from 'react-router';
 import {
   CEO,
   building,
@@ -27,11 +28,17 @@ const CUSTOM_ANIMATION = {
 }
 
 const About = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(0)
   const [imageLoaded, setImageLoaded] = useState(false)
 
-  const handleOpen = index =>
-    setOpen(prevIndex => (prevIndex === index ? null : index))
+  const handleOpen = index => setOpen(prevIndex => (prevIndex === index ? null : index));
+  const handleNavigationToProduct = ()=>{
+    navigate("/our-products");
+  }
+  const handleNavigationToContact = ()=>{
+    navigate("/contact-us");
+  }
 
   const accordion = [
     {
@@ -118,7 +125,8 @@ const About = () => {
               title='Buy Products'
               color='#321e17'
               bg='#fff'
-              border='none'
+              action={handleNavigationToProduct}
+
             />
             <AboutButton
               title='Contact us'
@@ -126,6 +134,7 @@ const About = () => {
               bg='transparent'
               border='1px solid #FFFFFF'
               hover='#fff'
+              action={handleNavigationToContact}
             />
           </div>
         </div>

@@ -1,9 +1,15 @@
+import { useNavigate } from "react-router";
 import hamburger from "../../assets/home/hamburger1.jpg";
 import Button from "../Button";
 
 const Contact = () => {
+    const navigate = useNavigate();
+
+    const handleNavigationToContact = ()=>{
+        navigate("/contact-us");
+    }
   return (
-    <section className="relative flex justify-center p-12 mt-24">
+    <section className="relative flex justify-center p-10 md:p-12 mt-24">
         {/* background image */}
         <img 
             src={hamburger} 
@@ -21,7 +27,7 @@ const Contact = () => {
                 <p className="text-base font-normal font-poppins text-center xl:text-start">Discover our exquisite range of bakery essentials. Contact us now to place your order and elevate your culinary creations.</p>
             </div>
             <div className="self-center">
-                <Button title="Order Now" arrow={true} action={()=> window.open('https://wa.me/2348092694135', '_blank')}/>
+                <Button title="Order Now" arrow={true} action={handleNavigationToContact}/>
             </div>
         </div>
     </section>

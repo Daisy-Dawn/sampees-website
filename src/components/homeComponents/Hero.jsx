@@ -45,7 +45,7 @@ const Hero = () => {
         navigate("/our-products")
     }
   return (
-    <section className="relative h-[87dvh] flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4 p-12">
+    <section className="relative h-[87dvh] flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4 p-10 md:p-12">
         {/* image background */}
         <AnimatePresence>
             {slideShowData.map((image, index) => (
@@ -76,41 +76,7 @@ const Hero = () => {
             <h3 className="text-white text-base font-poppins font-normal md:max-w-[80%] my-4">From premium milk flavors to exquisite bakery materials, explore our NAFDAC-approved range crafted for perfection.</h3>
             <Button action={handleRedirectionToShop} title="Learn More" arrow={true} />
         </div>
-        {/* image carousel */}
-        {/* <div className="relative overflow-hidden w-full max-w-[24.75rem] h-[24.75rem] rounded-[0.625rem]">
-            <img 
-               src={slideShowData[carouselIndex]} 
-               className="w-full h-full object-cover"
-               loading="lazy" 
-               alt="sampees product"
-            />   
-        </div> */}
     </section>
-    // <section className="relative flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4 p-12">
-    //     {/* Rectangular background */}
-    //     <div className="absolute top-0 left-0 w-full h-full">
-    //         <img src={rectangle} className="w-full h-full" alt="rectangle background" />
-    //     </div>
-    //     {/* Header text */}
-    //     <div className="md:max-w-[50%] relative z-10">
-    //         <h1 className="text-[2.5rem] sm:text-[3rem] font-mont font-bold">Discover the Essence of Quality Baking</h1>
-    //         <h3 className="text-base font-poppins font-normal md:max-w-[80%] my-4">From premium milk flavors to exquisite bakery materials, explore our NAFDAC-approved range crafted for perfection.</h3>
-    //         <Button action={handleRedirectionToShop} title="Learn More" arrow={true} />
-    //     </div>
-    //     {/* image carousel */}
-    //     <div className="relative overflow-hidden w-full max-w-[24.75rem] h-[24.75rem] rounded-[0.625rem]">
-    //         <img 
-    //            src={slideShowData[carouselIndex]} 
-    //            className="w-full h-full object-cover"
-    //            loading="lazy" 
-    //            alt="sampees product"
-    //         />   
-    //         <div className="absolute top-1/2 left-0 flex justify-between w-full px-1">
-    //             <div className="p-1 rounded-full bg-white shadow-sm cursor-pointer" onClick={handleNavigateLeft}><MdKeyboardArrowLeft size={24} /></div>
-    //             <div className="p-1 rounded-full bg-white shadow-sm cursor-pointer" onClick={handleNavigateRight}><MdKeyboardArrowRight size={24} /></div>
-    //         </div>
-    //     </div>
-    // </section>
   )
 }
 

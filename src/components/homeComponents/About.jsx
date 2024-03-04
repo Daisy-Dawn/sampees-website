@@ -8,7 +8,7 @@ import baker3 from "../../assets/home/bakerr3.jpg";
 
 const About = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center w-full h-[40rem] p-12 mt-24">
+    <section className="relative flex flex-col items-center justify-center w-full h-[40rem] p-10 md:p-12 mt-24">
           {/* image background */}
           <img 
               src={baker3} 

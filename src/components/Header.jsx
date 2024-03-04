@@ -1,5 +1,5 @@
 import {useState}  from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
@@ -8,7 +8,15 @@ import { logo } from "../assets";
 
 
 const Header = () => {
+    const navigate = useNavigate();
     const [revealNav, setRevealNav] = useState(false);
+    const handleNavigationToContactDesktop = ()=>{
+        navigate("/contact-us");
+    }
+    const handleNavigationToContactMobile = ()=>{
+        navigate("/contact-us");
+        setRevealNav(!revealNav);
+    }
     const navLinks = [
         {
             title:"Home",
@@ -31,12 +39,12 @@ const Header = () => {
     // header-bg
   return (
     <nav className={`w-full h-[13dvh] sticky top-0 left-0 z-50 bg-[#F8F9FA]  shadow-sm transition-all duration-300 overflow-x-clip`}>
-      <div className="flex justify-between items-center h-full mx-12">
-          <div className="w-16 h-auto">
-              <a href="/">
+      <div className="flex justify-between items-center h-full mx-10 md:mx-12">
+          <div className="w-16 h-16">
+              <Link to="/">
                 {/* LOGO */}
                   <img src={logo} className="w-full h-auto object-cover" alt="brand logo" />
-              </a>
+              </Link>
           </div>
 
           {/* desktop nav */}
@@ -49,7 +57,7 @@ const Header = () => {
                   ))}
               </ul>
               <div className="hidden md:block">
-                  <Button title="Get Quote" />    
+                  <Button title="Get Quote" action={handleNavigationToContactDesktop} />    
               </div>
           {/* desktop nav */}
 
@@ -59,16 +67,16 @@ const Header = () => {
               className="md:hidden flex flex-col gap-10 justify-center absolute top-0 right-0 transition-all duration-300 bg-white w-1/2 h-dvh rounded-l-[0.625rem]">
               <ul className="flex flex-col items-center gap-8">
                   {navLinks.map(link => (
-                      <li key={link.title} className="font-header text-[#77808B] text-xl cursor-pointer">
-                        <a href={link.anchor} className="flex items-center gap-1 group">
+                      <li key={link.title} onClick={()=> setRevealNav(!revealNav)} className="font-header text-[#77808B] text-xl cursor-pointer">
+                        <NavLink to={link.anchor} className="flex items-center gap-1 group">
                             {link.title} 
                             <div className="group-hover:translate-x-1 group-hover:-translate-y-1  transform transition-all duration-300"><MdOutlineArrowOutward size={12} /></div>
-                        </a>
+                        </NavLink>
                     </li>
                   ))}
               </ul>
               <div className="mx-auto">
-                  <Button title="Get Quote" />
+                  <Button title="Get Quote" action={handleNavigationToContactMobile} />
               </div>
 
               {/* button to hide mobile nav */}

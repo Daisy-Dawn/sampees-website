@@ -107,7 +107,7 @@ const Contact = () => {
         <h3 className="text-base font-medium font-mont text-center mt-4">Any question or remarks? Just write us a message!</h3>
       </div>
       <div className="flex flex-col lg:flex-row justify-between p-4 mt-4 gap-8">
-        <div className="lg:flex-[1] gap-4 flex flex-col items-center lg:items-start justify-between bg-[#F8F9FA] backdrop:blur-sm p-4 md:p-8 rounded-[0.625rem] text-black ">
+        <div className="lg:flex-[1] gap-4 flex flex-col items-center lg:items-start justify-between bg-[#F8F9FA] backdrop:blur-sm p-6 md:p-8 rounded-[0.625rem] text-black ">
           <div>
             <h3 className="font-poppins font-semibold text-lg text-center lg:text-start">Contact Information</h3>
             <h4 className="font-poppins font-normal text-sm text-center lg:text-start">Say something to start a live chat!</h4>

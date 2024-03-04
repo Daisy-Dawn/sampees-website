@@ -3,7 +3,7 @@ import TestimonialCard from "./TestimonialCard"
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-col items-center gap-4 p-12 my-24">
+    <div className="flex flex-col items-center gap-4 p-10 md:p-12 my-24">
         <h2 className="text-[1.6rem] sm:text-[2.5rem] font-semibold font-mont">Testimonials</h2>
         <h3 className="text-base font-medium font-mont text-center">What our clients are saying</h3>
         <div className="flex gap-8 flex-col sm:items-center lg:flex-row mt-4">

@@ -13,19 +13,19 @@ const Footer = () => {
   const navLinks = [
     {
         title:"Home",
-        anchor:"#"
+        anchor:"/"
     },
     {
         title:"About Us",
-        anchor:"#"
+        anchor:"/about-us"
     },
     {
         title:"Our Products",
-        anchor:"#"
+        anchor:"/our-products"
     },
     {
         title:"Contact Us",
-        anchor:"#"
+        anchor:"/contact-us"
     },
 ]
 
@@ -76,16 +76,16 @@ const Footer = () => {
         <div className="flex-[1] flex flex-col gap-4">
           <h3 className="text-[#7e212c] font-bold">Company</h3>
           {navLinks.map(link => (
-            <a 
+            <Link 
               key={link.title} 
-              href={link.anchor}
+              to={link.anchor}
               className="text-[#77808B] text-base flex items-center gap-1 group"
             >
               {link.title}
               <div className="group-hover:translate-x-1 group-hover:-translate-y-1  transform transition-all duration-300">
                 <MdOutlineArrowOutward size={12} />
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
