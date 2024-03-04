@@ -8,8 +8,8 @@ const FeaturedComponent = ({image, header, body}) => {
         navigate("/our-products");
     }
   return (
-    <div className="bg-[#7e212c] bg-opacity-5 w-full max-w-[16rem] p-4 flex flex-col items-center rounded-[0.625rem]">
-        <div className="w-[10.875rem] h-[10.875rem] p-2 bg-[#7e212c] bg-opacity-10 rounded-[0.625rem] overflow-hidden mb-2">
+    <div className="bg-[#7e212c] bg-opacity-5 w-full max-w-[20rem] p-4 flex flex-col items-center rounded-[0.625rem]">
+        <div className="w-[14.875rem] h-[12.875rem] p-2 bg-[#7e212c] bg-opacity-10 rounded-[0.625rem] overflow-hidden mb-2">
             <img 
                 src={image}
                 className="w-full h-full object-cover"
