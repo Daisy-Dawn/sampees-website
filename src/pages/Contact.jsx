@@ -1,9 +1,191 @@
-import React from 'react'
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { FaFacebook } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
+import Button from "../components/Button";
 
 const Contact = () => {
+  const navigate = useNavigate();
+  // options for radio input
+  const options = ['General enquiry', 'Product enquiry', "Delivery Enquiry"];
+
+  // form data states
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName:"",
+    email: "",
+    phoneNumber: "",
+    selectedOption: options[0],
+    message:""
+  })
+
+  // form error states
+  const [errors, setErrors] = useState({
+    firstName:"",
+    lastName:"",
+    email: "",
+    phoneNumber:"",
+    message:""
+  });
+
+  // function for handling change in input state
+  const handleChange = e => {
+    const { name, value } = e.target
+
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+
+    setErrors({
+      ...errors,
+      [name]: ''
+    })
+  }
+
+  // email checker
+  const checkEmail = (email)=>{
+    return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+  };
+
+  // Validation function
+  const validateForm = ()=>{
+    const newErrors = {}
+    
+    if (formData.firstName.trim() === '') {
+      newErrors.firstName = 'First Name is required!'
+    }
+    if (formData.lastName.trim() === '') {
+      newErrors.lastName = 'Last Name is required!'
+    }
+    if (formData.phoneNumber.trim() === '') {
+      newErrors.phoneNumber = 'Phone number is required!'
+    }
+    if (formData.message.trim() === '') {
+      newErrors.message = 'Message is required'
+    }
+    if (formData.email.trim() === '') {
+      newErrors.email = 'Email is required!'
+    }else {
+      // check email format if the email field is not empty
+      const emailValidity = checkEmail(formData.email);
+      if (!emailValidity) {
+        newErrors.email = "Email is in a wrong format!";
+      }
+    }
+    
+    //check for errors
+    if (Object.values(newErrors).some(error => error !== '')) {
+      setErrors(newErrors);
+      return false;
+    } else{
+      return true;
+    }
+  }
+  
+  const handleFormSubmission = (e)=>{
+    e.preventDefault();
+
+    if(validateForm()){
+      alert('Your form was submitted successfully!');
+      navigate("/");
+    }
+  }
+
+ 
+
+
   return (
-    <div>
-      Contact
+    <div className="p-12">
+      <div>
+        <h2 className="text-[1.6rem] sm:text-[2.5rem] font-semibold font-mont text-center">Contact Us</h2>
+        <h3 className="text-base font-medium font-mont text-center mt-4">Any question or remarks? Just write us a message!</h3>
+      </div>
+      <div className="flex flex-col lg:flex-row justify-between p-4 mt-4 gap-8">
+        <div className="lg:flex-[1] gap-4 flex flex-col items-center lg:items-start justify-between bg-[#F8F9FA] backdrop:blur-sm p-4 md:p-8 rounded-[0.625rem] text-black ">
+          <div>
+            <h3 className="font-poppins font-semibold text-lg text-center lg:text-start">Contact Information</h3>
+            <h4 className="font-poppins font-normal text-sm text-center lg:text-start">Say something to start a live chat!</h4>
+          </div>
+          <div>
+            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
+              <MdOutlinePhoneInTalk size={24} />
+              <p className="text-base">+234-8060790000</p>
+            </div>
+            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2 my-6">
+              <MdOutlineMailOutline size={24} />
+              <p className="text-base">divinemercyman@gmail.com</p>
+            </div>
+            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
+              <MdOutlineLocationOn size={24} />
+              <p className="max-w-[80%] text-center lg:text-start text-base">Block D Shop 8 Almagamated  Bakery Int&#39;l Market, Ogidi, Anambra State</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaFacebook size={16}/></Link></div>
+            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaInstagram size={16}/></Link></div>
+            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaTwitter size={16}/></Link></div>
+            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaWhatsapp size={16}/></Link></div>
+          </div>
+        </div>
+        <div className="lg:flex-[2] px-2 md:px-8 pt-8">
+          <form action="#" method="post" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="col-span-2 md:col-auto">
+              <label htmlFor="firstName" className="font-poppins font-medium mb-4 flex items-center gap-1">First Name <span className="text-blossom">*</span></label>
+              <input type="text" onChange={handleChange} value={formData.firstName} name="firstName" id="firstName" className="block border-b border-solid border-black outline-none w-full"/>
+              {errors.firstName && <p className="text-red-500 text-sm mt-2">{errors.firstName}</p>}
+            </div>
+            <div className="col-span-2 md:col-auto">
+              <label htmlFor="lastName" className="font-poppins font-medium mb-4 flex items-center gap-1">Last Name <span className="text-blossom">*</span></label>
+              <input type="text" name="lastName" id="lastName" onChange={handleChange} value={formData.lastName} className="block border-b border-solid border-black outline-none w-full"/>
+              {errors.lastName && <p className="text-red-500 text-sm mt-2">{errors.lastName}</p>}
+            </div>
+            <div className="col-span-2 md:col-auto">
+              <label htmlFor="email" className="font-poppins font-medium mb-4 flex items-center gap-1">Email <span className="text-blossom">*</span></label>
+              <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} className="block border-b border-solid border-black outline-none w-full" />
+              {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
+            </div>
+            <div className="col-span-2 md:col-auto">
+              <label htmlFor="phone" className="font-poppins font-medium mb-4 flex items-center gap-1">Phone Number <span className="text-blossom">*</span></label>
+              <input type="number" name="phoneNumber" id="phone" onChange={handleChange} value={formData.phoneNumber} className="block border-b border-solid border-black outline-none w-full" />
+              {errors.phoneNumber && <p className="text-red-500 text-sm mt-2">{errors.phoneNumber}</p>}
+            </div>
+            <div className="col-span-2">
+              <h3 className="font-medium font-poppins mb-2">Select Subject?</h3>
+              <div className="flex gap-4 flex-wrap">
+                {options.map((option, index)=> (
+                  <div key={index} className="flex gap-2">
+                    <input 
+                      key={index} 
+                      type="radio" 
+                      id={`option ${index}`} 
+                      value={option} 
+                      name={`option${index}`}
+                      onChange={handleChange}
+                      checked={formData.selectedOption === option}
+                      className="cursor-pointer"
+                    />
+                    <label htmlFor={`option ${index}`}>{option}</label>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="col-span-2">
+              <label htmlFor="message" className="font-poppins font-medium mb-8">Message <span className="text-blossom">*</span></label>
+              <textarea name="message" onChange={handleChange} value={formData.message} id="message" cols="25" rows="2" autoCorrect="true" className="block resize-none border-b border-solid border-black outline-none w-full"></textarea>
+              {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
+            </div>
+            <div className="justify-self-end col-span-2">
+              <Button title="Send Message" type="submit" action={handleFormSubmission} />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }
