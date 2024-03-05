@@ -8,6 +8,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 import Button from "../components/Button";
+import Map from "../components/MainMap";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -134,25 +135,25 @@ const Contact = () => {
           </div>
         </div>
         <div className="lg:flex-[2] px-2 md:px-8 pt-8">
-          <form action="#" method="post" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form action="#" method="post" className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="col-span-2 md:col-auto">
               <label htmlFor="firstName" className="font-poppins font-medium mb-4 flex items-center gap-1">First Name <span className="text-blossom">*</span></label>
-              <input type="text" onChange={handleChange} value={formData.firstName} name="firstName" id="firstName" className="block border-b border-solid border-black outline-none w-full"/>
+              <input type="text" onChange={handleChange} value={formData.firstName} name="firstName" id="firstName" className="block bg-[#F8F9FA] p-2 outline-none w-full"/>
               {errors.firstName && <p className="text-red-500 text-sm mt-2">{errors.firstName}</p>}
             </div>
             <div className="col-span-2 md:col-auto">
               <label htmlFor="lastName" className="font-poppins font-medium mb-4 flex items-center gap-1">Last Name <span className="text-blossom">*</span></label>
-              <input type="text" name="lastName" id="lastName" onChange={handleChange} value={formData.lastName} className="block border-b border-solid border-black outline-none w-full"/>
+              <input type="text" name="lastName" id="lastName" onChange={handleChange} value={formData.lastName} className="block bg-[#F8F9FA] p-2 outline-none w-full"/>
               {errors.lastName && <p className="text-red-500 text-sm mt-2">{errors.lastName}</p>}
             </div>
             <div className="col-span-2 md:col-auto">
               <label htmlFor="email" className="font-poppins font-medium mb-4 flex items-center gap-1">Email <span className="text-blossom">*</span></label>
-              <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} className="block border-b border-solid border-black outline-none w-full" />
+              <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} className="block bg-[#F8F9FA] p-2 outline-none w-full" />
               {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
             </div>
             <div className="col-span-2 md:col-auto">
               <label htmlFor="phone" className="font-poppins font-medium mb-4 flex items-center gap-1">Phone Number <span className="text-blossom">*</span></label>
-              <input type="number" name="phoneNumber" id="phone" onChange={handleChange} value={formData.phoneNumber} className="block border-b border-solid border-black outline-none w-full" />
+              <input type="number" name="phoneNumber" id="phone" onChange={handleChange} value={formData.phoneNumber} className="block bg-[#F8F9FA] p-2 outline-none w-full" />
               {errors.phoneNumber && <p className="text-red-500 text-sm mt-2">{errors.phoneNumber}</p>}
             </div>
             <div className="col-span-2">
@@ -176,8 +177,8 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-span-2">
-              <label htmlFor="message" className="font-poppins font-medium mb-8">Message <span className="text-blossom">*</span></label>
-              <textarea name="message" onChange={handleChange} value={formData.message} id="message" cols="25" rows="2" autoCorrect="true" className="block resize-none border-b border-solid border-black outline-none w-full"></textarea>
+              <label htmlFor="message" className="font-poppins font-medium">Message <span className="text-blossom">*</span></label>
+              <textarea name="message" onChange={handleChange} value={formData.message} id="message" cols="25" rows="8" autoCorrect="true" className="block resize-none bg-[#F8F9FA] p-2 outline-none w-full mt-4"></textarea>
               {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
             </div>
             <div className="justify-self-end col-span-2">
@@ -185,6 +186,9 @@ const Contact = () => {
             </div>
           </form>
         </div>
+      </div>
+      <div className="w-full h-screen rounded-[0.625rem]">
+        <Map />
       </div>
     </div>
   )

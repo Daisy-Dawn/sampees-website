@@ -3,7 +3,6 @@ import AboutButton from '../components/AboutButton';
 import { useNavigate } from 'react-router';
 import {
   CEO,
-  building,
   faqIcon,
   icon_label,
   machine1,
@@ -168,13 +167,13 @@ const About = () => {
             fueled our journey to become a renowned name in the industry.
             <br />
             <br />
-            Over the years, we've pushed boundaries, blending tradition with
+            Over the years, we&#39;ve pushed boundaries, blending tradition with
             modern techniques to create a diverse range of captivating flavors.
             Each milestone, from expanding our product line to pioneering new
             profiles, reflects our dedication to excellence.
             <br />
             <br />
-            Driven by a desire to inspire creativity, we've forged lasting
+            Driven by a desire to inspire creativity, we&#39;ve forged lasting
             partnerships with chefs around the globe. As we look to the future,
             we remain committed to our founding principles, ensuring every
             product embodies the essence of quality and flavor. Join us as we
@@ -382,7 +381,7 @@ const About = () => {
             We are proudly registered with the National Agency for Food and Drug
             Administration and Control (NAFDAC) in Nigeria. This registration
             signifies that our products have undergone a thorough evaluation and
-            meet the agency's stringent safety and quality standards.
+            meet the agency&#39;s stringent safety and quality standards.
             <br />
             <br />
             <span className='text-blossom font-semibold'>
