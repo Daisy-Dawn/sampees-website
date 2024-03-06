@@ -69,7 +69,7 @@ function App () {
   // since it's the initial state
   setTimeout(() => {
     setLoading(false);
-  }, 5000); // Simulated loading time: 1 second
+  }, 100); // Simulated loading time: 1 second
 
   return (
     <div className="app">

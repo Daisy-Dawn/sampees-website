@@ -23,9 +23,12 @@ const FlavourProducts = () => {
             convenient powder form.
           </p>
 
-          <p className='text-blossom italic font-poppins text-[0.8rem] lg:text-[1rem] font-medium'>
+          <h2 className='text-blossom font-poppins text-[1rem] lg:text-[1.2rem] font-semibold'>Ingredients:</h2>
+          <p className='text-bark text-[1.1rem] font-poppins font-medium'>Corn Starch, Powdered Milk, Milk Flavour, Butyric Acid, Vanillin</p>
+
+          {/* <p className='text-blossom italic font-poppins text-[0.8rem] lg:text-[1rem] font-medium'>
             Made in Nigeria
-          </p>
+          </p> */}
 
           <h2 className='mt-[2rem] text-blossom font-mont text-[1rem] lg:text-[1.3rem] font-bold'>
             Available Sizes
@@ -62,13 +65,14 @@ const FlavourProducts = () => {
               {!imageLoaded && <div className='skeleton'></div>}{' '}
               {/* Show skeleton only when image is not loaded */}
               <p className='text-bark font-medium text-[0.8rem] lg:text-[1rem] font-poppins'>
-                80g
+                100g
               </p>
             </div>
           </div>
 
           <div className='lg:mx-[4rem] mx-[1.8rem]'>
-            <AboutButton title='Order Now' color='white' bg='#321e17' />
+            <AboutButton title='Order Now' color='white' hover='white'
+              bgHover='#7E212C' bg='#321e17' />
           </div>
         </div>
 
@@ -102,9 +106,12 @@ const FlavourProducts = () => {
             bakers and dessert enthusiasts everywhere.{' '}
           </p>
 
-          <p className='text-blossom italic font-poppins text-[0.8rem] lg:text-[1rem] font-medium'>
+          <h2 className='text-blossom font-poppins text-[1rem] lg:text-[1.2rem] font-semibold'>Ingredients:</h2>
+          <p className='text-bark text-[1.1rem] font-poppins font-medium'>Corn Starch, Powdered Milk, Vanilla Flavour, Butyric Acid, Vanillin</p>
+
+          {/* <p className='text-blossom italic font-poppins text-[0.8rem] lg:text-[1rem] font-medium'>
             Made in Nigeria
-          </p>
+          </p> */}
 
           <h2 className='mt-[2rem] text-blossom font-mont text-[1rem] lg:text-[1.3rem] font-bold'>
             Available Sizes
@@ -141,13 +148,14 @@ const FlavourProducts = () => {
               {!imageLoaded && <div className='skeleton'></div>}{' '}
               {/* Show skeleton only when image is not loaded */}
               <p className='text-bark font-medium text-[0.8rem] lg:text-[1rem] font-poppins'>
-                80g
+                100g
               </p>
             </div>
           </div>
 
           <div className='lg:mx-[4rem] mx-[1.8rem'>
-            <AboutButton title='Order Now' color='white' bg='#321e17' />
+            <AboutButton title='Order Now' color='white' hover='white'
+              bgHover='#7E212C' bg='#321e17' />
           </div>
         </div>
 
@@ -182,9 +190,12 @@ const FlavourProducts = () => {
             irresistible banana goodness.{' '}
           </p>
 
-          <p className='text-blossom italic font-poppins text-[0.8rem] lg:text-[1rem] font-medium'>
+          <h2 className='text-blossom font-poppins text-[1rem] lg:text-[1.2rem] font-semibold'>Ingredients:</h2>
+          <p className='text-bark text-[1.1rem] font-poppins font-medium'>Corn Starch, Powdered Milk, Banana Flavour, Butyric Acid, Vanillin</p>
+
+          {/* <p className='text-blossom italic font-poppins text-[0.8rem] lg:text-[1rem] font-medium'>
             Made in Nigeria
-          </p>
+          </p> */}
 
           <h2 className='mt-[2rem] text-blossom font-mont text-[1rem] lg:text-[1.3rem] font-bold'>
             Available Sizes
@@ -221,13 +232,14 @@ const FlavourProducts = () => {
               {!imageLoaded && <div className='skeleton'></div>}{' '}
               {/* Show skeleton only when image is not loaded */}
               <p className='text-bark font-medium text-[0.8rem] lg:text-[1rem] font-poppins'>
-                80g
+                100g
               </p>
             </div>
           </div>
 
           <div className='lg:mx-[4rem] mx-[1.8rem]'>
-            <AboutButton title='Order Now' color='white' bg='#321e17' />
+            <AboutButton title='Order Now' color='white' hover='white'
+              bgHover='#7E212C' bg='#321e17' />
           </div>
         </div>
 
@@ -261,9 +273,12 @@ const FlavourProducts = () => {
             evoke memories of tropical bliss.{' '}
           </p>
 
-          <p className='text-blossom italic font-poppins text-[0.8rem] lg:text-[1rem] font-medium'>
+          <h2 className='text-blossom font-poppins text-[1rem] lg:text-[1.2rem] font-semibold'>Ingredients:</h2>
+          <p className='text-bark text-[1.1rem] font-poppins font-medium'>Corn Starch, Powdered Milk, Coconut Flavour, Butyric Acid, Vanillin</p>
+
+          {/* <p className='text-blossom italic font-poppins text-[0.8rem] lg:text-[1rem] font-medium'>
             Made in Nigeria
-          </p>
+          </p> */}
 
           <h2 className='mt-[2rem] text-blossom font-mont text-[1rem] lg:text-[1.3rem] font-bold'>
             Available Sizes
@@ -306,7 +321,8 @@ const FlavourProducts = () => {
           </div>
 
           <div className='lg:mx-[4rem] mx-[1.8rem]'>
-            <AboutButton title='Order Now' color='white' bg='#321e17' />
+            <AboutButton title='Order Now' color='white' hover='white'
+              bgHover='#7E212C' bg='#321e17' />
           </div>
         </div>
 

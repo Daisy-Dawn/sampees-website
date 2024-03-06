@@ -102,7 +102,7 @@ const Contact = () => {
 
 
   return (
-    <div className="p-12">
+    <div className="p-12 ">
       <div>
         <h2 className="text-[1.6rem] sm:text-[2.5rem] font-semibold font-mont text-center">Contact Us</h2>
         <h3 className="text-base font-medium font-mont text-center mt-4">Any question or remarks? Just write us a message!</h3>
@@ -114,6 +114,7 @@ const Contact = () => {
             <h4 className="font-poppins font-normal text-sm text-center lg:text-start">Say something to start a live chat!</h4>
           </div>
           <div>
+            <h2 className="mb-[0.5rem] font-mont text-[1rem] font-bold text-blossom">HEAD OFFICE</h2>
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlinePhoneInTalk size={24} />
               <p className="text-base">+234-8060790000</p>
@@ -127,33 +128,50 @@ const Contact = () => {
               <p className="max-w-[80%] text-center lg:text-start text-base">Block D Shop 8 Almagamated  Bakery Int&#39;l Market, Ogidi, Anambra State</p>
             </div>
           </div>
-          <div className="flex items-center gap-4">
+
+          <div>
+            <h2 className="mb-[0.5rem] font-mont text-[1rem] font-bold text-blossom">BRANCH OFFICE</h2>
+            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
+              <MdOutlineLocationOn size={24} />
+              <p className="max-w-[80%] text-center lg:text-start text-base">No.1 Sampeters Close Ndiagu, Ogidi Idemili North L.G.A</p>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="mb-[0.5rem] font-mont text-[1rem] font-bold text-blossom">BRANCH OFFICE</h2>
+            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
+              <MdOutlineLocationOn size={24} />
+              <p className="max-w-[80%] text-center lg:text-start text-base">Shop 32 Awolowo Modern Market Olosha, Mushin Lagos</p>
+            </div>
+          </div>
+
+          {/* <div className="flex items-center gap-4">
             <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaFacebook size={16}/></Link></div>
             <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaInstagram size={16}/></Link></div>
             <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaTwitter size={16}/></Link></div>
             <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaWhatsapp size={16}/></Link></div>
-          </div>
+          </div> */}
         </div>
-        <div className="lg:flex-[2] px-2 md:px-8 pt-8">
+        <div className="lg:flex-[2] px-2  md:px-8 pt-8">
           <form action="#" method="post" className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="col-span-2 md:col-auto">
               <label htmlFor="firstName" className="font-poppins font-medium mb-4 flex items-center gap-1">First Name <span className="text-blossom">*</span></label>
-              <input type="text" onChange={handleChange} value={formData.firstName} name="firstName" id="firstName" className="block bg-[#F8F9FA] p-2 outline-none w-full"/>
+              <input type="text" onChange={handleChange} value={formData.firstName} name="firstName" id="firstName" className="block contact p-2 outline-none  w-full"/>
               {errors.firstName && <p className="text-red-500 text-sm mt-2">{errors.firstName}</p>}
             </div>
             <div className="col-span-2 md:col-auto">
               <label htmlFor="lastName" className="font-poppins font-medium mb-4 flex items-center gap-1">Last Name <span className="text-blossom">*</span></label>
-              <input type="text" name="lastName" id="lastName" onChange={handleChange} value={formData.lastName} className="block bg-[#F8F9FA] p-2 outline-none w-full"/>
+              <input type="text" name="lastName" id="lastName" onChange={handleChange} value={formData.lastName} className="block contact p-2 outline-none w-full"/>
               {errors.lastName && <p className="text-red-500 text-sm mt-2">{errors.lastName}</p>}
             </div>
             <div className="col-span-2 md:col-auto">
               <label htmlFor="email" className="font-poppins font-medium mb-4 flex items-center gap-1">Email <span className="text-blossom">*</span></label>
-              <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} className="block bg-[#F8F9FA] p-2 outline-none w-full" />
+              <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} className="block contact p-2 outline-none w-full" />
               {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
             </div>
             <div className="col-span-2 md:col-auto">
               <label htmlFor="phone" className="font-poppins font-medium mb-4 flex items-center gap-1">Phone Number <span className="text-blossom">*</span></label>
-              <input type="number" name="phoneNumber" id="phone" onChange={handleChange} value={formData.phoneNumber} className="block bg-[#F8F9FA] p-2 outline-none w-full" />
+              <input type="number" name="phoneNumber" id="phone" onChange={handleChange} value={formData.phoneNumber} className="block contact p-2 outline-none w-full" />
               {errors.phoneNumber && <p className="text-red-500 text-sm mt-2">{errors.phoneNumber}</p>}
             </div>
             <div className="col-span-2">
@@ -178,7 +196,7 @@ const Contact = () => {
             </div>
             <div className="col-span-2">
               <label htmlFor="message" className="font-poppins font-medium">Message <span className="text-blossom">*</span></label>
-              <textarea name="message" onChange={handleChange} value={formData.message} id="message" cols="25" rows="8" autoCorrect="true" className="block resize-none bg-[#F8F9FA] p-2 outline-none w-full mt-4"></textarea>
+              <textarea name="message" onChange={handleChange} value={formData.message} id="message" cols="25" rows="8" autoCorrect="true" className="block resize-none contact p-2 outline-none w-full mt-4"></textarea>
               {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
             </div>
             <div className="justify-self-end col-span-2">

@@ -40,7 +40,7 @@ const Footer = () => {
           <h3 className="text-base text-[#77808B] my-4">Sampees Global Resources Limited, a distinguished entity in the bakery and confectionery sector, 
             is officially registered with the Corporate Affairs Commission (CAC).
           </h3>
-          <p className="text-sm text-black font-normal">Copyright S.G.R LTD</p>
+          <p className="text-sm text-black font-semibold">Copyright S.G.R LTD</p>
         </div>
 
         {/* contact group */}
@@ -61,8 +61,8 @@ const Footer = () => {
         </div>
 
         {/* socials group */}
-        <div className="flex-[1] flex flex-col gap-4">
-          {/* social icons */}
+        {/* <div className="flex-[1] flex flex-col gap-4">
+          social icons
           <div className="flex items-center gap-4">
             <div className="bg-[#7e212c] p-1 text-white rounded-full cursor-pointer"><Link to="/"><FaFacebook size={16}/></Link></div>
             <div className="bg-[#7e212c] p-1 text-white rounded-full cursor-pointer"><Link to="/"><FaInstagram size={16}/></Link></div>
@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="bg-[#7e212c] p-1 text-white rounded-full cursor-pointer"><Link to="/"><FaWhatsapp size={16}/></Link></div>
           </div>
           <p className="text-[#77808B] text-base">Follow us on social media for the latest updates, offers, and sweet inspirations from our bakery to your table.</p>
-        </div>
+        </div> */}
 
         {/* website links */}
         <div className="flex-[1] flex flex-col gap-4">

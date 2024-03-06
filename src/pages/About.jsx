@@ -122,6 +122,8 @@ const About = () => {
           <div className='flex gap-[2.5rem]'>
             <AboutButton
               title='Buy Products'
+              hover='white'
+              bgHover='#7E212C'
               color='#321e17'
               bg='#fff'
               action={handleNavigationToProduct}
