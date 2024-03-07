@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa6";
-import { FaWhatsapp } from "react-icons/fa6";
+// import { FaFacebook } from "react-icons/fa6";
+// import { FaInstagram } from "react-icons/fa6";
+// import { FaTwitter } from "react-icons/fa6";
+// import { FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { logo } from "../assets";
 
@@ -35,7 +35,7 @@ const Footer = () => {
         {/* brand group */}
         <div className="flex-[2]">
           <div>
-             <img className="w-[60px] h-auto object-cover" src={logo} alt="sampee logo" />
+             <img className="w-14 h-auto object-cover" src={logo} alt="sampee logo" />
           </div>
           <h3 className="text-base text-[#77808B] my-4">Sampees Global Resources Limited, a distinguished entity in the bakery and confectionery sector, 
             is officially registered with the Corporate Affairs Commission (CAC).

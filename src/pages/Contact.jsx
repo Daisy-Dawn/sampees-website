@@ -1,12 +1,8 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
-import { FaFacebook } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa6";
-import { FaWhatsapp } from "react-icons/fa6";
 import Button from "../components/Button";
 import Map from "../components/MainMap";
 
@@ -184,7 +180,7 @@ const Contact = () => {
                       type="radio" 
                       id={`option ${index}`} 
                       value={option} 
-                      name={`option${index}`}
+                      name={`selectedOption`}
                       onChange={handleChange}
                       checked={formData.selectedOption === option}
                       className="cursor-pointer"
