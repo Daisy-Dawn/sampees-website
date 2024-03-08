@@ -26,13 +26,13 @@ const QualityAssurance = () => {
           <ScrollSurface>
             <div className="flex flex-col md:flex-row items-center justify-between gap-2">
               <div className="flex gap-1 md:max-w-[60%]">
-                  <span  className="text-[1rem] font-semibold font-poppins text-[#7e212c] mt-2">01</span>
+                  <motion.span initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8, delay:0.2}} viewport={{once:true}}  className="text-[1rem] font-semibold font-poppins text-[#7e212c] mt-2">01</motion.span>
                   <motion.div initial={{opacity:0.6}} whileInView={{opacity:1}} transition={{duration:2}} >
-                    <h3  className="lg:text-[1.8rem] text-[1.5rem] font-bold font-mont mb-2">Premium Ingredients, Superior Flavors</h3>
-                    <p  className="lg:text-[1.2rem] text-[1rem] font-poppins font-normal">At the heart of our products lies our commitment to using only premium, 
+                    <motion.h3 initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8}} viewport={{once:true}}  className="lg:text-[1.8rem] text-[1.5rem] font-bold font-mont mb-2">Premium Ingredients, Superior Flavors</motion.h3>
+                    <motion.p initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8}} viewport={{once:true}}   className="lg:text-[1.2rem] text-[1rem] font-poppins font-normal">At the heart of our products lies our commitment to using only premium, 
                         carefully selected ingredients. This ensures each flavor powder not only 
                         meets but exceeds expectations, delivering unmatched freshness and taste
-                    </p>    
+                    </motion.p>    
                   </motion.div>
               </div>
               <img src={ingredient2} className="w-full md:max-w-[40%]  h-[19rem] object-cover" alt="baking powder poured into a bowl" />
@@ -49,13 +49,13 @@ const QualityAssurance = () => {
               alt="nafdac logo" 
               loading="lazy"
             />
-                <span className="text-[1rem] font-semibold font-poppins text-[#7e212c] mt-2">02</span>
+                <motion.span initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8, delay:0.2}} viewport={{once:true}} className="text-[1rem] font-semibold font-poppins text-[#7e212c] mt-2">02</motion.span>
                 <div >
-                  <h3 className="lg:text-[1.8rem] text-[1.5rem] font-bold font-mont mb-2">Beyond Standards, Beyond Expectations</h3>
-                  <p className="lg:text-[1.2rem] text-[1rem] font-poppins font-normal">Our flavor powders surpass NAFDAC requirements, undergoing extensive
+                  <motion.h3 initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8}} viewport={{once:true}}  className="lg:text-[1.8rem] text-[1.5rem] font-bold font-mont mb-2">Beyond Standards, Beyond Expectations</motion.h3>
+                  <motion.p initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8}} viewport={{once:true}}  className="lg:text-[1.2rem] text-[1rem] font-poppins font-normal">Our flavor powders surpass NAFDAC requirements, undergoing extensive
                     quality assurance tests. We promise not just to meet but to exceed the highest standards of quality and safety, ensuring 
                     satisfaction and trust.
-                  </p>    
+                  </motion.p>    
                 </div>
             </motion.div>
           </ScrollSurface>
@@ -64,13 +64,13 @@ const QualityAssurance = () => {
           <ScrollSurface>
             <motion.div initial={{opacity:0.6}} whileInView={{opacity:1}} transition={{duration:2}} className="flex flex-col md:flex-row items-center justify-between gap-2">
               <div className="flex gap-1 md:max-w-[50%] ">
-                  <span className="text-[1rem] font-semibold font-poppins text-[#7e212c] mt-2">03</span>
+                  <motion.span initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8, delay:0.2}} viewport={{once:true}}  className="text-[1rem] font-semibold font-poppins text-[#7e212c] mt-2">03</motion.span>
                   <div >
-                    <h3 className="lg:text-[1.8rem] text-[1.5rem] font-bold font-mont mb-2">Consistency Through Innovation</h3>
-                    <p className="lg:text-[1.2rem] text-[1rem] font-poppins font-normal">Leveraging state-of-the-art automated blending systems and the 
+                    <motion.h3 initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8}} viewport={{once:true}}  className="lg:text-[1.8rem] text-[1.5rem] font-bold font-mont mb-2">Consistency Through Innovation</motion.h3>
+                    <motion.p initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8}} viewport={{once:true}}  className="lg:text-[1.2rem] text-[1rem] font-poppins font-normal">Leveraging state-of-the-art automated blending systems and the 
                       expertise of our team, we guarantee precise, consistent mixing for balanced flavors every time. Experience the perfect 
                       harmony of taste in each batch.
-                    </p>    
+                    </motion.p>    
                   </div>
               </div>
               <img src={machine} className="w-full md:max-w-[40%]  h-full object-cover" alt="baking powder poured into a bowl" />
