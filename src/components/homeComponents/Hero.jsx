@@ -81,12 +81,6 @@ const Hero = () => {
         </div>
 
         {/* Header text */}
-        {/* <div className="w-full md:max-w-[50%] relative z-10"> */}
-            {/* <h1 className="text-white text-[2.5rem] sm:text-[3rem] font-mont font-bold">Discover the Essence of Quality Baking</h1>
-            <h3 className="text-white text-base font-poppins font-normal md:max-w-[80%] my-4">From premium milk flavors to exquisite bakery materials, explore our NAFDAC-approved range crafted for perfection.</h3>
-            <AboutButton action={handleRedirectionToShop} title="Learn More" arrow={true} color='white' border="none" hover='white'
-              bgHover='#FED5D9' bg='#7E212C' /> */}
-            {/* <Button action={handleRedirectionToShop} title="Learn More" arrow={true} /> */}
         <div ref={scope} className="w-full md:max-w-[50%] relative text-center z-10">
             <motion.div initial={{y:40, opacity:0}}>
                 <h1 className="overflow-hidden text-white text-[2.2rem] sm:text-[3rem] font-mont font-bold"> Discover the Essence of Quality Baking </h1>

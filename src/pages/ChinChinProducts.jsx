@@ -3,6 +3,7 @@ import {chinchin} from '../assets'
 import AboutButton from '../components/AboutButton'
 import { useNavigate } from 'react-router-dom';
 import Product from '../components/Product';
+import { ProductWithIngredients } from '../components/Product';
 
 const ChinChinProducts = () => {
   const navigate = useNavigate();
@@ -18,6 +19,8 @@ const ChinChinProducts = () => {
       grams:{
         small:"60g"
       },
+      ingredients:"Wheat Flour, Sugar, Margarine, Vegetable Oil, Milk Powder, Egg, Iodized Salt, Flavour (De-Sunnex)",
+      
       productImages:{
         small: chinchin
       }
@@ -27,7 +30,7 @@ const ChinChinProducts = () => {
   return (
     <>
     {flavours.map((flavour, index)=> (
-        <Product 
+        <ProductWithIngredients 
           key={index} 
           header={flavour.header} 
           description={flavour.description} 

@@ -38,7 +38,7 @@ const Contact = () => {
               bgHover='#FED5D9' bg='#7E212C' />
                 {/* <Button title="Order Now" arrow={true} action={handleNavigationToContact}/> */}
             </div>
-        </div>
+        {/* </div> */}
         </ScrollSurface>
     </section>
   )
