@@ -1,19 +1,11 @@
 import { useEffect, useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import {AnimatePresence, motion, useAnimate, stagger, useInView} from "framer-motion";
-import carousel1 from "../../assets/home/carousel1.jpg";
-import carousel2 from "../../assets/home/carousel2.jpg";
-import carousel3 from "../../assets/home/carousel3.jpg";
-import carousel4 from "../../assets/home/carousel4.jpg";
-import carousel5 from "../../assets/home/carousel5.jpg";
-import carousel6 from "../../assets/home/carousel6.jpg";
-import carousel7 from "../../assets/home/carousel7.jpg";
-import carousel8 from "../../assets/home/carousel8.jpg";
 import Button from "../Button";
 import AboutButton from "../AboutButton";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import {bread, bread2, meatpie, popcorn, smallchops} from '../../assets'
+import {bread, bread2, cake, meatpie, popcorn, smallchops} from '../../assets'
 
 
 const Hero = () => {
@@ -31,7 +23,7 @@ const Hero = () => {
 
 
     const slideShowData = useMemo(() => [
-        bread, bread2, meatpie, popcorn, smallchops
+        cake,bread, bread2, meatpie, popcorn, smallchops
     ], []); // Empty array means it will only be calculated once
     
 

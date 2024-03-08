@@ -65,7 +65,7 @@ const handleNavigateRight = () => {
 
   return (
     <>
-      <div className='relative h-[87dvh] flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4 p-10 md:p-12'>
+      <div className='relative h-[20rem] md:h-[87dvh] flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4 p-10 md:p-12'>
       {/* CAROUSEL */}
       <AnimatePresence>
             {slideShowData.map((image, index) => (
@@ -76,16 +76,16 @@ const handleNavigateRight = () => {
                     exit={{opacity:0}}
                     transition={{duration:2,ease:"easeIn"}}
                     src={image} 
-                    className="w-full skeleton absolute z-10 top-0 left-0 h-full object-contain md:object-cover" 
+                    className="w-full skeleton  absolute z-10 top-0 left-0 h-full object-contain md:object-cover" 
                     alt="product banner" 
                     loading="lazy" 
                 />
             ))}
         </AnimatePresence>
         {/* dark background */}
-        <div className="bg-[#eef5f8] w-full h-full absolute top-0 left-0"></div>
+        <div className="bg-[#eef5f8] w-full product h-full absolute top-0 left-0"></div>
 
-        <div className="absolute top-1/2 left-0 flex justify-between w-full px-1">
+        <div className="absolute top-1/2 left-0 flex  justify-between w-full px-1">
             <div className="p-1 rounded-full bg-white shadow-sm cursor-pointer" onClick={handleNavigateLeft}><MdKeyboardArrowLeft size={24} /></div>
             <div className="p-1 rounded-full bg-white shadow-sm cursor-pointer" onClick={handleNavigateRight}><MdKeyboardArrowRight size={24} /></div>
         </div>

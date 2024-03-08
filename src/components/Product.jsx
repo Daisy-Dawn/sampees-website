@@ -57,7 +57,7 @@ const ProductWithIngredients = ({header, description, ingredients, gramsBig, gra
                     >
                         <LazyLoad width={150} offset={100}>
                         <img
-                            className='w-[150px] '
+                            className='w-[120px] md:w-[150px] '
                             src={productImageBig}
                             alt={header}
                             onLoad={() => setImageLoaded(true)} // Set imageLoaded state to true when the image is loaded
@@ -80,7 +80,7 @@ const ProductWithIngredients = ({header, description, ingredients, gramsBig, gra
                     >
                         <LazyLoad width={150} offset={100}>
                         <img
-                            className='w-[150px] '
+                            className='w-[120px] md:w-[150px] '
                             src={productImageSmall}
                             alt={header}
                             onLoad={() => setImageLoaded(true)} // Set imageLoaded state to true when the image is loaded

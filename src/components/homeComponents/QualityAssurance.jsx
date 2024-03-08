@@ -6,7 +6,7 @@ import machine from "../../assets/home/machine3.png";
 import ScrollSurface from "../animation/ScrollSurface";
 import Surface from "../animation/Surface";
 import {motion} from "framer-motion";
-import {machine4} from '../../assets'
+import {corn1, corn2, machine4, machine41, machine44} from '../../assets'
 
 const QualityAssurance = () => {
   return (
@@ -36,7 +36,7 @@ const QualityAssurance = () => {
                     </motion.p>    
                   </motion.div>
               </div>
-              <img src={ingredient2} className="w-full md:max-w-[40%]  h-[19rem] object-cover" alt="baking powder poured into a bowl" />
+              <img src={corn2} className="w-full md:max-w-[40%]  h-[19rem] object-cover" alt="baking powder poured into a bowl" />
             </div>
           </ScrollSurface>
 
@@ -46,7 +46,7 @@ const QualityAssurance = () => {
               {/* nafdac image */}
             <img 
               src={nafdac} 
-              className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] w-full max-w-[24rem] -z-10 opacity-10"
+              className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] w-full max-w-[24rem] -z-10 opacity-[0.2] xl:opacity-[0.5]"
               alt="nafdac logo" 
               loading="lazy"
             />
@@ -74,7 +74,7 @@ const QualityAssurance = () => {
                     </motion.p>    
                   </div>
               </div>
-              <img src={machine4} className="w-full md:max-w-[40%]  h-full object-cover" alt="baking powder poured into a bowl" />
+              <img src={machine41} className="w-full md:max-w-[40%]  h-full object-cover" alt="baking powder poured into a bowl" />
             </motion.div>
           </ScrollSurface>
         </div>
