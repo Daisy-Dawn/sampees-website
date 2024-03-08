@@ -51,7 +51,7 @@ const About = () => {
     {
       question: 'What are your most popular flavors?',
       answer:
-        'We offer a diverse range of flavors, including popular choices like milk, vanilla, banana, and coconut. Additionally, we continuously explore and develop new flavor profiles to cater to evolving preferences.'
+        'We offer a diverse range of flavors, including popular choices like milk, vanilla, banana, pineapple and coconut. Currently we have 5 flavours in the market. Additionally, we continuously explore and develop new flavor profiles to cater to evolving preferences.'
     },
     {
       question:
@@ -77,7 +77,7 @@ const About = () => {
     {
       question: 'Where can I buy your products?',
       answer:
-        'Our products are available through various channels, including our different company sites, select retailers, and distributors. You can visit our website to find a location near you or send a message to purchase directly from the site.'
+        'Our products are available through various channels, including our different company sites, select retailers, and distributors. You can visit our website to find a location near you or send a message to purchase directly from the site. If you are in Kano, Please Contact +234-9031379666. If you are in Lagos, please contact +234-8033346345. In Ibadan, please call +234-8132594206. Located in the East? Please call our Head Office +234-7026305228'
     },
     {
       question: 'Do you offer any customized flavor solutions?',

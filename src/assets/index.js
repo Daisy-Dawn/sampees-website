@@ -13,8 +13,6 @@ import milklabel from '../assets/products/milklabel.png'
 import milklabelsealed from '../assets/products/milklabelsealed.png'
 import milkproduct1 from '../assets/products/milkproduct1.png'
 import vanillalabel from '../assets/products/vanillalabel.png'
-// import danobig from '../assets/products/danobig.png'
-// import danosmall from '../assets/products/danosmall.png'
 import logo from '../assets/logo.png'
 import building1 from '../assets/about/building1.png'
 import bananaFlavour from '../assets/products/bananaFlavour.png'
@@ -24,11 +22,21 @@ import milkFlavourBig from '../assets/products/milkFlavourBig.png'
 import milkFlavourSmall from '../assets/products/milkFlavourSmall.png'
 import pineappleFlavour from '../assets/products/pineappleFlavour.png'
 import vanillaFlavour from '../assets/products/vanillaFlavour.png'
+import bread from '../assets/home/bread.jpeg'
+import bread2 from '../assets/home/bread2.jpeg'
+import chef from '../assets/home/chef.jpeg'
+import chef2 from '../assets/home/chef2.jpeg'
+import chef3 from '../assets/home/chef3.jpeg'
+import chef4 from '../assets/home/chef4.jpeg'
+import meatpie from '../assets/home/meatpie.jpeg'
+import popcorn from '../assets/home/popcorn.jpeg'
+import smallchops from '../assets/home/smallchops.jpeg'
 
 export {
 icon_label, staffs, CEO, machine1, machine2, machine3, machine4,nafdac,faqIcon,
     chinChinCarton,chinChinlabel,milklabel,milklabelsealed,milkproduct1,
     vanillalabel,logo,building1, bananaFlavour, chinchin,CoconutFlavour,
-    milkFlavourBig,milkFlavourSmall, pineappleFlavour,vanillaFlavour
+    milkFlavourBig,milkFlavourSmall, pineappleFlavour,vanillaFlavour, bread,bread2,
+    chef,meatpie, popcorn, smallchops,chef2, chef3, chef4,
 }
 // danobig,danosmall,

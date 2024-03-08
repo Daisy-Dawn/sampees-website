@@ -12,7 +12,7 @@ const Testimonials = () => {
       name: "Njoku Blessing",
       body:"100g and 500g" ,
       profession:"Executive Pastry Chef",
-      comment:"Integrating their premium flavors into our dessert menu has elevated our pastry offerings to a whole new level. Our customers can&#39;t get enough. A must-have for any culinary professional aiming for excellence."
+      comment:"Integrating their premium flavors into our dessert menu has elevated our pastry offerings to a whole new level. Our customers can't get enough. A must-have for any culinary professional aiming for excellence."
     },
     {
       image:"https://i.pinimg.com/564x/97/e6/4e/97e64e91c01ea1be5a9f65cac58c8a4b.jpg",
@@ -26,7 +26,7 @@ const Testimonials = () => {
       name: "Anyanwu Godwin",
       body:"100g and 500g" ,
       profession:"Food Product Developer",
-      comment:"In developing new snack lines, their flavors have been instrumental in achieving the unique taste profiles we were aiming for. Their commitment to quality and innovation aligns perfectly with our brand&#39;s values."
+      comment:"In developing new snack lines, their flavors have been instrumental in achieving the unique taste profiles we were aiming for. Their commitment to quality and innovation aligns perfectly with our brand's values."
     },
   ]
   return (

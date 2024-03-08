@@ -13,6 +13,8 @@ import Button from "../Button";
 import AboutButton from "../AboutButton";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import {bread, bread2, meatpie, popcorn, smallchops} from '../../assets'
+
 
 const Hero = () => {
     const [carouselIndex, setCarouselIndex] = useState(2);
@@ -29,7 +31,7 @@ const Hero = () => {
 
 
     const slideShowData = useMemo(() => [
-        carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel6, carousel7, carousel8
+        bread, bread2, meatpie, popcorn, smallchops
     ], []); // Empty array means it will only be calculated once
     
 

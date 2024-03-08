@@ -8,7 +8,8 @@ import {
   vanillaFlavour
 } from '../assets'
 import { useNavigate } from 'react-router-dom'
-import { ProductWithIngredients } from '../components/Product'
+import ProductWithIngredients from '../components/Product'
+// import { ProductWithIngredients } from '../components/Product'
 
 const FlavourProducts = () => {
   const flavours = [

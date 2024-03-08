@@ -18,7 +18,7 @@ const ProductWithIngredients = ({header, description, ingredients, gramsBig, gra
     }
 
     return (
-        <div className='bg-[#F8F9FA] px-[1rem] md:px-[3rem] 2xl:px-[9rem] py-[2rem] xl:py-[6rem] grid md:grid-cols-2 grid-cols-1 items-center md:gap-[1.5rem] lg:gap-[3rem] gap-[2rem]'>
+        <div className='bg-[#eef5f8] px-[1rem] md:px-[3rem] 2xl:px-[9rem] py-[2rem] xl:py-[6rem] grid md:grid-cols-2 grid-cols-1 items-center md:gap-[1.5rem] lg:gap-[3rem] gap-[2rem]'>
             <div className='order-2 lg:order-1'>
               <Surface>
                 <h1 className='font-mont text-[1.1rem] text-center lg:text-left lg:text-[1.8rem] text-blossom font-bold'>
@@ -127,4 +127,4 @@ const ProductWithIngredients = ({header, description, ingredients, gramsBig, gra
     )
 }
 
-export {ProductWithIngredients};
+export default ProductWithIngredients;

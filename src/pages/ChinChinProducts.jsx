@@ -3,7 +3,9 @@ import {chinchin} from '../assets'
 import AboutButton from '../components/AboutButton'
 import { useNavigate } from 'react-router-dom';
 import Product from '../components/Product';
-import { ProductWithIngredients } from '../components/Product';
+import ProductWithIngredients from '../components/Product';
+// import { ProductWithIngredients } from '../components/Product';
+// import { ProductWithIngredients } from '../components/Product';
 
 const ChinChinProducts = () => {
   const navigate = useNavigate();

@@ -139,7 +139,7 @@ const Contact = () => {
         <h3 className="text-base font-semibold font-mont text-center text-blossom mt-4">Any question or remarks? Just write us a message!</h3>
       </div>
       <div className="flex flex-col lg:grid grid-cols-2 justify-between p-0 sm:p-4 mt-4 gap-8">
-        <div className="grid grid-cols-1 order-2 md:order-1 gap-[2rem] bg-[#F8F9FA] backdrop:blur-sm p-6 md:p-8 rounded-[0.625rem] text-black">
+        <div className="grid grid-cols-1 order-2 lg:order-1 gap-[2rem] bg-[#F8F9FA] backdrop:blur-sm p-6 md:p-8 rounded-[0.625rem] text-black">
         <div>
             <h3 className="font-poppins font-semibold text-lg text-center lg:text-start">Contact Information</h3>
             <h4 className="font-poppins font-normal text-sm text-center text-blossom lg:text-start">Say something to start a live chat!</h4>
@@ -149,7 +149,11 @@ const Contact = () => {
           <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">HEAD OFFICE</h2>
           <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlinePhoneInTalk size={24} />
-              <p className="text-base">+234-7026305228</p>
+              <div className="flex-col flex gap-4 md:flex-row">
+                <p className="text-base">+234-7026305228</p>
+                <p className="text-base">+234-8026840200</p>
+              </div>
+              
             </div>
             <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2 my-6">
               <MdOutlineMailOutline size={24} />
@@ -157,12 +161,12 @@ const Contact = () => {
             </div>
             <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlineLocationOn size={24} />
-              <p className="max-w-[80%] text-left lg:text-start text-base">Block D Shop 8 Almagamated  Bakery Int&#39;l Market, Ogidi, Anambra State</p>
+              <p className="max-w-[80%] text-left lg:text-start text-base">Block D Shop 8 Almagamated  Bakery Int'l Market, Ogidi, Anambra State</p>
             </div>
           </div>
 
           <div>
-          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">BRANCH OFFICE</h2>
+          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">FACTORY OFFICE</h2>
             <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlineLocationOn size={24} />
               <p className="max-w-[80%] text-left lg:text-start text-base">No.1 Sampeters Close Ndiagu, Ogidi Idemili North L.G.A</p>
@@ -170,12 +174,59 @@ const Contact = () => {
           </div>
 
           <div>
-          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">BRANCH OFFICE</h2>
-            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
+          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">LAGOS BRANCH OFFICE</h2>
+            <div className="flex flex-row lg:flex-row items-center mb-4 gap-4 lg:gap-2">
               <MdOutlineLocationOn size={24} />
-              <p className="max-w-[80%] text-left lg:text-start text-base">Shop 32 Awolowo Modern Market Olosha, Mushin Lagos</p>
+              <p className="max-w-[80%] text-left lg:text-start  text-base">Shop 32 Awolowo Modern Market Olosha, Mushin Lagos</p>
+            </div>
+            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
+              <MdOutlinePhoneInTalk size={24} />
+              <p className="text-base">+234-8033346345</p>
             </div>
           </div>
+
+          <div>
+          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">IBADAN BRANCH OFFICE</h2>
+            <div className="flex flex-row lg:flex-row items-center mb-4 gap-4 lg:gap-2">
+              <MdOutlineLocationOn size={24} />
+              <p className="max-w-[80%] text-left lg:text-start capitalize text-base">Chi Bakers, opposite yembtol petrol stateion, Apata ibadan</p>
+            </div>
+            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
+              <MdOutlinePhoneInTalk size={24} />
+              <p className="text-base">+234-8132594206</p>
+            </div>
+          </div>
+
+          <div>
+          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">KANO BRANCH OFFICE </h2>
+            <div className="flex flex-row lg:flex-row items-center mb-4 gap-4 lg:gap-2">
+              <MdOutlineLocationOn size={24} />
+              <p className="max-w-[80%] text-left lg:text-start  text-base">14B Katako Line, Sabon-geri Market, Kano</p>
+            </div>
+            <div className="flex flex-row lg:flex-row mb-2 items-center gap-4 lg:gap-2">
+              <MdOutlinePhoneInTalk size={24} />
+              <div className="flex-col flex gap-4 md:flex-row">
+              <p className="text-base">+234-9031379666</p>
+              <p className="text-base">+234-8062433495</p>
+              </div>
+            </div>
+            {/* <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
+              <MdOutlinePhoneInTalk size={24} />
+              <p className="text-base">+234-8062433495</p>
+            </div> */}
+          </div>
+
+          {/* <div>
+          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">KANO BRANCH OFFICE 2</h2>
+            <div className="flex flex-row lg:flex-row items-center mb-4 gap-4 lg:gap-2">
+              <MdOutlineLocationOn size={24} />
+              <p className="max-w-[80%] text-left lg:text-start  text-base">Shop 32 Awolowo Modern Market Olosha, Mushin Lagos</p>
+            </div>
+            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
+              <MdOutlinePhoneInTalk size={24} />
+              <p className="text-base">+234-8032301963</p>
+            </div>
+          </div> */}
 
           {/* <div> */}
           <div className="flex items-center gap-4">
@@ -189,7 +240,7 @@ const Contact = () => {
 
         </div>
         
-        <div className="lg:flex-[2] order-1 md:order-2 px-2 lg:px-0 2xl:px-8  md:px-8 pt-8">
+        <div className="lg:flex-[2] order-1 lg:order-2 px-2 lg:px-0 2xl:px-8  md:px-8 pt-8">
           <form action="#" method="post" className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="col-span-2 md:col-auto">
               <label htmlFor="firstName" className="font-poppins font-medium mb-4 flex items-center gap-1">First Name <span className="text-blossom">*</span></label>

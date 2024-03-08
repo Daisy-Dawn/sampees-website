@@ -8,6 +8,7 @@ import instaBg from "../../assets/home/back.png";
 import baker3 from "../../assets/home/bakerr3.jpg";
 import Surface from "../animation/Surface";
 import {motion, useTransform, useScroll, useAnimate, useInView, stagger} from "framer-motion";
+import {chef, chef2, chef3, chef4} from '../../assets'
 
 const About = () => {
   const ref = useRef(null);
@@ -32,8 +33,8 @@ const About = () => {
         
             {/* image background */}
             <img 
-                src={baker3} 
-                className="absolute w-full h-full object-cover top-0 left-0 -z-10"
+                src={chef3} 
+                className="absolute w-full h-full object-none top-0 left-0 -z-10"
                 alt="linear background" 
                 loading="lazy"
             />

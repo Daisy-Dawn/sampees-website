@@ -6,6 +6,7 @@ import machine from "../../assets/home/machine3.png";
 import ScrollSurface from "../animation/ScrollSurface";
 import Surface from "../animation/Surface";
 import {motion} from "framer-motion";
+import {machine4} from '../../assets'
 
 const QualityAssurance = () => {
   return (
@@ -73,7 +74,7 @@ const QualityAssurance = () => {
                     </motion.p>    
                   </div>
               </div>
-              <img src={machine} className="w-full md:max-w-[40%]  h-full object-cover" alt="baking powder poured into a bowl" />
+              <img src={machine4} className="w-full md:max-w-[40%]  h-full object-cover" alt="baking powder poured into a bowl" />
             </motion.div>
           </ScrollSurface>
         </div>
