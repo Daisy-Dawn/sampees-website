@@ -8,6 +8,7 @@ import AboutButton from "../components/AboutButton";
 import Map from "../components/MainMap";
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
+import { FaFacebook, FaWhatsapp } from "react-icons/fa6";
 
 const Contact = () => {
   const navigate = useNavigate();

@@ -8,7 +8,7 @@ import LazyLoad from 'react-lazy-load';
 
 const Product = ({header, description, gramsBig, gramsSmall, productImageBig, productImageSmall}) => {
     const navigate = useNavigate();
-    const [displayedProduct, setDisplayedProduct] = useState(productImageBig);
+    const [displayedProduct, setDisplayedProduct] = useState(productImageSmall);
 
     // Set display image
     const handleSetDisplayedProduct = (image)=>{
@@ -93,7 +93,7 @@ const Product = ({header, description, gramsBig, gramsSmall, productImageBig, pr
 const ProductWithIngredients = ({header, description, ingredients, gramsBig, gramsSmall, productImageBig, productImageSmall}) => {
     const navigate = useNavigate();
     const [imageLoaded, setImageLoaded] = useState(false);
-    const [displayedProduct, setDisplayedProduct] = useState(productImageBig);
+    const [displayedProduct, setDisplayedProduct] = useState(productImageSmall);
 
     const handleSetDisplayedProduct = (image)=>{
         setDisplayedProduct(image);

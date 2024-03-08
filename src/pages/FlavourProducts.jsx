@@ -41,7 +41,7 @@ const FlavourProducts = () => {
     },
     {
       header:"DE-SUNNEX MIX BANANA FLAVOUR POWDER",
-      description:"Immerse yourself in the tropical delight of our De-Sunnex Mix Banana Flavor Powder. Made with premium ingredients, including ripe banana essence, sugar, and natural flavorings, this powder encapsulates the luscious sweetness and distinctive aroma of freshly-picked bananas. Whether you're creating banana-flavored cakes, shakes, or ice creams, this powder promises to infuse your creations with irresistible banana goodness.{' '}",
+      description:"Immerse yourself in the tropical delight of our De-Sunnex Mix Banana Flavor Powder. Made with premium ingredients, including ripe banana essence, sugar, and natural flavorings, this powder encapsulates the luscious sweetness and distinctive aroma of freshly-picked bananas. Whether you're creating banana-flavored cakes, shakes, or ice creams, this powder promises to infuse your creations with irresistible banana goodness.",
       ingredients:"Corn Starch, Powdered Milk, Banana Flavour, Butyric Acid, Vanillin",
       grams:{
         small:"80g"
