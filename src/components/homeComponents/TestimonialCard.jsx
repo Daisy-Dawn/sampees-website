@@ -2,7 +2,7 @@
 
 const TestimonialCard = ({image, name, profession,comment}) => {
   return (
-    <div className="w-full md:w-[19rem] lg:max-w-[21.875rem] h-[18.875rem] bg-white rounded-[0.625rem] p-4 shadow-md">
+    <div className="w-full md:w-[19rem] lg:max-w-[21.875rem] h-full lg:h-[18.875rem] bg-white rounded-[0.625rem] p-4 shadow-md">
         <div className="flex items-center gap-2">
             <img src={image} className="w-[3.5rem] h-[3.5rem] object-cover rounded-full border-2 border-solid border-petal" alt="profile photo" loading="lazy" />
             <div>

@@ -10,6 +10,7 @@ import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
 import { FaFacebook, FaWhatsapp } from "react-icons/fa6";
 
+
 const Contact = () => {
   const navigate = useNavigate();
   // options for radio input
@@ -132,57 +133,63 @@ const Contact = () => {
   }
 
   return (
-    <div className="p-12 ">
+    <div className="md:p-12 lg:p-[1.5rem] xl:p-[3rem] p-[1rem] ">
       <div>
         <h2 className="text-[1.6rem] sm:text-[2.5rem] font-semibold font-mont text-center">Contact Us</h2>
         <h3 className="text-base font-semibold font-mont text-center text-blossom mt-4">Any question or remarks? Just write us a message!</h3>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between p-4 mt-4 gap-8">
-        <div className="lg:flex-[1] gap-4 flex flex-col items-center lg:items-start justify-between bg-[#F8F9FA] backdrop:blur-sm p-6 md:p-8 rounded-[0.625rem] text-black ">
-          <div>
+      <div className="flex flex-col lg:grid grid-cols-2 justify-between p-0 sm:p-4 mt-4 gap-8">
+        <div className="grid grid-cols-1 order-2 md:order-1 gap-[2rem] bg-[#F8F9FA] backdrop:blur-sm p-6 md:p-8 rounded-[0.625rem] text-black">
+        <div>
             <h3 className="font-poppins font-semibold text-lg text-center lg:text-start">Contact Information</h3>
             <h4 className="font-poppins font-normal text-sm text-center text-blossom lg:text-start">Say something to start a live chat!</h4>
           </div>
+
           <div>
-            <h2 className="mb-[0.5rem] font-mont text-[1rem] font-bold text-blossom">HEAD OFFICE</h2>
-            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
+          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">HEAD OFFICE</h2>
+          <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlinePhoneInTalk size={24} />
               <p className="text-base">+234-7026305228</p>
             </div>
-            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2 my-6">
+            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2 my-6">
               <MdOutlineMailOutline size={24} />
               <p className="text-base">samchoprite@gmail.com</p>
             </div>
-            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
+            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlineLocationOn size={24} />
-              <p className="max-w-[80%] text-center lg:text-start text-base">Block D Shop 8 Almagamated  Bakery Int&#39;l Market, Ogidi, Anambra State</p>
+              <p className="max-w-[80%] text-left lg:text-start text-base">Block D Shop 8 Almagamated  Bakery Int&#39;l Market, Ogidi, Anambra State</p>
             </div>
           </div>
 
           <div>
-            <h2 className="mb-[0.5rem] font-mont text-[1rem] font-bold text-blossom">BRANCH OFFICE</h2>
-            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
+          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">BRANCH OFFICE</h2>
+            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlineLocationOn size={24} />
-              <p className="max-w-[80%] text-center lg:text-start text-base">No.1 Sampeters Close Ndiagu, Ogidi Idemili North L.G.A</p>
+              <p className="max-w-[80%] text-left lg:text-start text-base">No.1 Sampeters Close Ndiagu, Ogidi Idemili North L.G.A</p>
             </div>
           </div>
 
           <div>
-            <h2 className="mb-[0.5rem] font-mont text-[1rem] font-bold text-blossom">BRANCH OFFICE</h2>
-            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
+          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">BRANCH OFFICE</h2>
+            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlineLocationOn size={24} />
-              <p className="max-w-[80%] text-center lg:text-start text-base">Shop 32 Awolowo Modern Market Olosha, Mushin Lagos</p>
+              <p className="max-w-[80%] text-left lg:text-start text-base">Shop 32 Awolowo Modern Market Olosha, Mushin Lagos</p>
             </div>
           </div>
 
+          {/* <div> */}
           <div className="flex items-center gap-4">
             <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><a href="https://www.facebook.com/profile.php?id=61557285863744"><FaFacebook size={16}/></a></div>
             {/* <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaInstagram size={16}/></Link></div> */}
             {/* <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaTwitter size={16}/></Link></div> */}
             <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><a href="https://wa.link/4kb7e2"><FaWhatsapp size={16}/></a></div>
           </div>
+
+          {/* </div> */}
+
         </div>
-        <div className="lg:flex-[2] px-2  md:px-8 pt-8">
+        
+        <div className="lg:flex-[2] order-1 md:order-2 px-2 lg:px-0 2xl:px-8  md:px-8 pt-8">
           <form action="#" method="post" className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="col-span-2 md:col-auto">
               <label htmlFor="firstName" className="font-poppins font-medium mb-4 flex items-center gap-1">First Name <span className="text-blossom">*</span></label>

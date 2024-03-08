@@ -23,11 +23,12 @@ import CoconutFlavour from '../assets/products/CoconutFlavour.png'
 import milkFlavourBig from '../assets/products/milkFlavourBig.png'
 import milkFlavourSmall from '../assets/products/milkFlavourSmall.png'
 import pineappleFlavour from '../assets/products/pineappleFlavour.png'
+import vanillaFlavour from '../assets/products/vanillaFlavour.png'
 
 export {
 icon_label, staffs, CEO, machine1, machine2, machine3, machine4,nafdac,faqIcon,
     chinChinCarton,chinChinlabel,milklabel,milklabelsealed,milkproduct1,
     vanillalabel,logo,building1, bananaFlavour, chinchin,CoconutFlavour,
-    milkFlavourBig,milkFlavourSmall, pineappleFlavour,
+    milkFlavourBig,milkFlavourSmall, pineappleFlavour,vanillaFlavour
 }
 // danobig,danosmall,
