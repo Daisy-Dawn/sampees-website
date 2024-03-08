@@ -1,10 +1,10 @@
 import { FaArrowRight } from "react-icons/fa6";
 
-const Button = ({type = "button", title, color = "white", hover= 'transparent', bgHover = 'white', bg = "#7e212c", border = 'none', arrow = false, action}) => {
+const AboutButton = ({type = "button", title, color = "white", hover= 'transparent', bgHover = 'white', bg = "#7e212c", border = 'none', arrow = false, action}) => {
   return (
     <button 
         type={type}
-        className={`group text-${color} hover:text-${hover} bg-${bg} border-[1px] border-${border} flex items-center text-center gap-4 py-[0.8rem] lg:py-[0.8rem] px-[0.8rem] md:px-[1.2rem] lg:px-6 rounded-[0.625rem] font-poppins font-medium text-base transition-all duration-300 relative overflow-hidden z-10 button`}
+        className={`group text-${color} hover:text-${hover} bg-${bg} border-[1px] border-${border} flex items-center justify-center text-center gap-4 py-[0.8rem] lg:py-[0.8rem] px-[0.8rem] md:px-[1.2rem] lg:px-6 rounded-[0.625rem] font-poppins font-medium text-base transition-all duration-300 relative overflow-hidden z-10 button`}
         style={{ 
           color: color,
           backgroundColor: bg,
@@ -23,5 +23,5 @@ const Button = ({type = "button", title, color = "white", hover= 'transparent', 
   )
 }
 
-export default Button
+export default AboutButton
 

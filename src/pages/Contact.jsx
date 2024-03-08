@@ -8,7 +8,10 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 import Button from "../components/Button";
+import AboutButton from "../components/AboutButton";
 import Map from "../components/MainMap";
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -93,35 +96,65 @@ const Contact = () => {
     e.preventDefault();
 
     if(validateForm()){
-      alert('Your form was submitted successfully!');
-      navigate("/");
+      console.log('successfull!!!!!!!!')
+      // send the email to the client
+      const serviceId = 'service_0rc00vp'
+      const templateId = 'template_g9l3kj7'
+      const publicKey = 'imzRXN85NkuLIVV0S'
+
+      // create new object that contains dynamic template params
+      const templateParams = {
+        from_name: formData.firstName + ' ' + formData.lastName,
+        to_name: 'Sampees Global Resources Limited',
+        from_subject: formData.selectedOption,
+        message: formData.message,
+        from_phone: formData.phoneNumber,
+        from_email: formData.email
+      }
+
+      emailjs
+        .send(serviceId, templateId, templateParams, publicKey)
+        .then(response => {
+          console.log('Email sent successfully', response)
+          Swal.fire({
+            title: "Congrats!",
+            text: "Your form was submitted successfully!",
+            icon: "success"
+          });
+          navigate('/')
+        })
+        .catch(error => {
+          console.log('Error sending mail', error)
+          Swal.fire({
+            title: "Error!",
+            text: "There has been an error sending your message, while rectifying the error, please refresh and try again after a few seconds.!",
+            icon: "error"
+          });
+        })
     }
   }
-
- 
-
 
   return (
     <div className="p-12 ">
       <div>
         <h2 className="text-[1.6rem] sm:text-[2.5rem] font-semibold font-mont text-center">Contact Us</h2>
-        <h3 className="text-base font-medium font-mont text-center mt-4">Any question or remarks? Just write us a message!</h3>
+        <h3 className="text-base font-semibold font-mont text-center text-blossom mt-4">Any question or remarks? Just write us a message!</h3>
       </div>
       <div className="flex flex-col lg:flex-row justify-between p-4 mt-4 gap-8">
         <div className="lg:flex-[1] gap-4 flex flex-col items-center lg:items-start justify-between bg-[#F8F9FA] backdrop:blur-sm p-6 md:p-8 rounded-[0.625rem] text-black ">
           <div>
             <h3 className="font-poppins font-semibold text-lg text-center lg:text-start">Contact Information</h3>
-            <h4 className="font-poppins font-normal text-sm text-center lg:text-start">Say something to start a live chat!</h4>
+            <h4 className="font-poppins font-normal text-sm text-center text-blossom lg:text-start">Say something to start a live chat!</h4>
           </div>
           <div>
             <h2 className="mb-[0.5rem] font-mont text-[1rem] font-bold text-blossom">HEAD OFFICE</h2>
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlinePhoneInTalk size={24} />
-              <p className="text-base">+234-8060790000</p>
+              <p className="text-base">+234-7026305228</p>
             </div>
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2 my-6">
               <MdOutlineMailOutline size={24} />
-              <p className="text-base">divinemercyman@gmail.com</p>
+              <p className="text-base">samchoprite@gmail.com</p>
             </div>
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlineLocationOn size={24} />
@@ -145,12 +178,12 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* <div className="flex items-center gap-4">
-            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaFacebook size={16}/></Link></div>
-            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaInstagram size={16}/></Link></div>
-            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaTwitter size={16}/></Link></div>
-            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaWhatsapp size={16}/></Link></div>
-          </div> */}
+          <div className="flex items-center gap-4">
+            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><a href="https://www.facebook.com/profile.php?id=61557285863744"><FaFacebook size={16}/></a></div>
+            {/* <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaInstagram size={16}/></Link></div> */}
+            {/* <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaTwitter size={16}/></Link></div> */}
+            <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><a href="https://wa.link/4kb7e2"><FaWhatsapp size={16}/></a></div>
+          </div>
         </div>
         <div className="lg:flex-[2] px-2  md:px-8 pt-8">
           <form action="#" method="post" className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -200,7 +233,9 @@ const Contact = () => {
               {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
             </div>
             <div className="justify-self-end col-span-2">
-              <Button title="Send Message" type="submit" action={handleFormSubmission} />
+            <AboutButton title="Get Quote" color='white' hover='white'
+              bgHover='#FED5D9' bg='#7E212C' action={handleFormSubmission} />
+              {/* <Button title="Send Message" type="submit" action={handleFormSubmission} /> */}
             </div>
           </form>
         </div>

@@ -5,6 +5,7 @@ import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { logo } from "../assets";
+import AboutButton from '../components/AboutButton'
 
 
 const Header = () => {
@@ -57,7 +58,9 @@ const Header = () => {
                   ))}
               </ul>
               <div className="hidden md:block">
-                  <Button title="Get Quote" action={handleNavigationToContactDesktop} />    
+              <AboutButton title="Get Quote" color='white' hover='white'
+              bgHover='#FED5D9' bg='#7E212C' action={handleNavigationToContactDesktop} />
+                  {/* <Button title="Get Quote" action={handleNavigationToContactDesktop} />     */}
               </div>
           {/* desktop nav */}
 

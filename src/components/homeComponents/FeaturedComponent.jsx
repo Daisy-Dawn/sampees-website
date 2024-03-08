@@ -1,5 +1,6 @@
 import Button from "../Button"
 import { useNavigate } from "react-router-dom";
+import AboutButton from "../AboutButton";
 
 
 const FeaturedComponent = ({image, header, body}) => {
@@ -20,7 +21,9 @@ const FeaturedComponent = ({image, header, body}) => {
         <h4 className="h-[4rem] text-lg font-medium font-mont capitalize text-center mt-2">{header}</h4>
         <p className="text-base font-normal font-poppins my-2 text-center">{body}</p>
         <div className="text-center">
-            <Button title="View More" action={handleNavigationToProductPage} />
+        <AboutButton action={handleNavigationToProductPage} title="View More"  color='white' border="none" hover='white'
+              bgHover='#FED5D9' bg='#7E212C' />
+            {/* <Button title="View More" action={handleNavigationToProductPage} /> */}
         </div>
     </div>
   )

@@ -18,16 +18,37 @@ import {
   TabPanel
 } from '@material-tailwind/react'
 import ChinChinProducts from './ChinChinProducts'
+import {AnimatePresence, motion} from "framer-motion";
+import { useEffect, useState, useMemo } from "react";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Products = () => {
-  const images = [
-    chinChinlabel,
-    milkproduct1,
-    vanillalabel,
-    chinChinCarton,
-    milklabel,
-    milklabelsealed
-  ]
+  const [carouselIndex, setCarouselIndex] = useState(2);
+  const slideShowData = useMemo(() => [
+    chinChinlabel, milkproduct1, vanillalabel, chinChinCarton, milklabel, milklabelsealed, 
+], []); // Empty array means it will only be calculated once
+
+  useEffect(()=>{
+        
+    const interval = setInterval(() => {
+        setCarouselIndex((prevIndex) => (prevIndex + 1) % slideShowData.length);
+    },3000);
+
+    return () => clearInterval(interval);
+}, [slideShowData.length]);
+
+const handleNavigateLeft = () => {
+    if(carouselIndex > 0){
+    setCarouselIndex(carouselIndex - 1);
+   } 
+};
+const handleNavigateRight = () => {
+    if(carouselIndex < slideShowData.length - 1){
+    setCarouselIndex(carouselIndex + 1);
+   } 
+};
+
   const [activeTab, setActiveTab] = React.useState('powders')
 
   const data = [
@@ -44,71 +65,32 @@ const Products = () => {
   ]
 
   return (
-    <div>
+    <>
+      <div className='relative h-[87dvh] flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4 p-10 md:p-12'>
       {/* CAROUSEL */}
-      <Carousel
-        autoplay
-        loop
-        transition={{ duration: 1 }}
-        className='h-[50vh] sm:h-[70vh] lg:h-[85vh]'
-        prevArrow={({ handlePrev }) => (
-          <IconButton
-            variant='text'
-            color='white'
-            size='lg'
-            onClick={handlePrev}
-            className='!absolute top-2/4 left-4 -translate-y-2/4'
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth={2}
-              stroke='currentColor'
-              className='h-6 w-6'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18'
-              />
-            </svg>
-          </IconButton>
-        )}
-        nextArrow={({ handleNext }) => (
-          <IconButton
-            variant='text'
-            color='white'
-            size='lg'
-            onClick={handleNext}
-            className='!absolute top-2/4 !right-4 -translate-y-2/4'
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth={2}
-              stroke='currentColor'
-              className='h-6 w-6'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3'
-              />
-            </svg>
-          </IconButton>
-        )}
-      >
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt='sampees products'
-            className='h-full skeleton w-full object-cover'
-          />
-        ))}
-      </Carousel>
+      <AnimatePresence>
+            {slideShowData.map((image, index) => (
+                <motion.img 
+                    key={index}
+                    initial={{opacity:0}}
+                    animate={{ opacity: index === carouselIndex ? 1 : 0 }}
+                    exit={{opacity:0}}
+                    transition={{duration:2,ease:"easeIn"}}
+                    src={image} 
+                    className="w-full skeleton absolute top-0 left-0 h-full object-cover" 
+                    alt="product banner" 
+                    loading="lazy" 
+                />
+            ))}
+        </AnimatePresence>
+        {/* dark background */}
+        {/* <div className="bg-black bg-opacity-30 w-full h-full absolute top-0 left-0"></div> */}
+        {/* navigation buttons */}
+        <div className="absolute top-1/2 left-0 flex justify-between w-full px-1">
+            <div className="p-1 rounded-full bg-white shadow-sm cursor-pointer" onClick={handleNavigateLeft}><MdKeyboardArrowLeft size={24} /></div>
+            <div className="p-1 rounded-full bg-white shadow-sm cursor-pointer" onClick={handleNavigateRight}><MdKeyboardArrowRight size={24} /></div>
+        </div>
+        </div>
 
       {/* PRODUCTS HEADER */}
       <div className='flex justify-center items-center mt-[3rem] lg:mt-[5rem] gap-0 lg:gap-[1.5rem]'>
@@ -155,7 +137,7 @@ const Products = () => {
           </TabsBody>
         </Tabs>
       </div>
-    </div>
+    </>
   )
 }
 

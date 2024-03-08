@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: '',
         element: (
-          <Suspense fallback={<PreLoader />}>
+          <Suspense fallback={<Skeleton />}>
             <LazyHome />
           </Suspense>
         )
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: 'about-us',
         element: (
-          <Suspense fallback={<PreLoader />}>
+          <Suspense fallback={<Skeleton />}>
             <LazyAbout />
           </Suspense>
         )
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: 'contact-us',
         element: (
-          <Suspense fallback={<PreLoader />}>
+          <Suspense fallback={<Skeleton />}>
             <LazyContact />
           </Suspense>
         )
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: 'our-products',
         element: (
-          <Suspense fallback={<PreLoader />}>
+          <Suspense fallback={<Skeleton />}>
             <LazyProducts />
           </Suspense>
         )
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: '*',
         element: (
-          <Suspense fallback={<PreLoader />}>
+          <Suspense fallback={<Skeleton />}>
             <LazyNoPage />
           </Suspense>
         )
@@ -69,16 +69,16 @@ function App () {
   // since it's the initial state
   setTimeout(() => {
     setLoading(false);
-  }, 100); // Simulated loading time: 1 second
+  }, 100); // Simulated loading time: 0.1 second
 
   return (
-    <div className="app">
+    < >
       {loading ? (
         <Skeleton />
       ) : (
         <RouterProvider router={router}></RouterProvider>
       )}
-    </div>
+    </>
   )
 }
 

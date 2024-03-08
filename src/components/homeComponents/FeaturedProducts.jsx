@@ -1,8 +1,5 @@
 import FeaturedComponent from "./FeaturedComponent"
-import product1 from "../../assets/home/product1.png";
-import product2 from "../../assets/home/product2.png";
-import product3 from "../../assets/home/product3.png";
-
+import {CoconutFlavour, milkFlavourSmall, bananaFlavour} from '../../assets'
 
 const FeaturedProducts = () => {
   return (
@@ -11,9 +8,9 @@ const FeaturedProducts = () => {
         <h3 className="text-base font-medium font-mont text-center mt-4">Handpicked Selections for Unmatched Quality</h3>
 
         <div className="flex flex-col flex-wrap lg:flex-nowrap md:flex-row gap-4 mt-12">
-            <FeaturedComponent image={product1} header="MILK FLAVOUR POWDER" body="100g and 500g" />
-            <FeaturedComponent image={product3} header="BANANA FLAVOUR" body="100g and 500g" />
-            <FeaturedComponent image={product2} header="VANILLA FLAVOUR POWDER" body="100g and 500g" />
+            <FeaturedComponent image={milkFlavourSmall} header="MILK FLAVOUR POWDER" body="100g and 500g" />
+            <FeaturedComponent image={bananaFlavour} header="BANANA FLAVOUR POWDER" body="80g" />
+            <FeaturedComponent image={CoconutFlavour} header="COCONUT FLAVOUR POWDER" body="80g" />
         </div>
     </section>
   )

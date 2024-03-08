@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import hamburger from "../../assets/home/hamburger1.jpg";
 import Button from "../Button";
+import AboutButton from "../AboutButton";
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -27,7 +28,9 @@ const Contact = () => {
                 <p className="text-base font-normal font-poppins text-center xl:text-start">Discover our exquisite range of bakery essentials. Contact us now to place your order and elevate your culinary creations.</p>
             </div>
             <div className="self-center">
-                <Button title="Order Now" arrow={true} action={handleNavigationToContact}/>
+            <AboutButton title="Order Now" arrow={true} action={handleNavigationToContact} color='white' border="none" hover='white'
+              bgHover='#FED5D9' bg='#7E212C' />
+                {/* <Button title="Order Now" arrow={true} action={handleNavigationToContact}/> */}
             </div>
         </div>
     </section>

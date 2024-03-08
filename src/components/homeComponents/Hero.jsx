@@ -10,6 +10,7 @@ import carousel6 from "../../assets/home/carousel6.jpg";
 import carousel7 from "../../assets/home/carousel7.jpg";
 import carousel8 from "../../assets/home/carousel8.jpg";
 import Button from "../Button";
+import AboutButton from "../AboutButton";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
@@ -74,7 +75,9 @@ const Hero = () => {
         <div className="w-full md:max-w-[50%] relative z-10">
             <h1 className="text-white text-[2.5rem] sm:text-[3rem] font-mont font-bold">Discover the Essence of Quality Baking</h1>
             <h3 className="text-white text-base font-poppins font-normal md:max-w-[80%] my-4">From premium milk flavors to exquisite bakery materials, explore our NAFDAC-approved range crafted for perfection.</h3>
-            <Button action={handleRedirectionToShop} title="Learn More" arrow={true} />
+            <AboutButton action={handleRedirectionToShop} title="Learn More" arrow={true} color='white' border="none" hover='white'
+              bgHover='#FED5D9' bg='#7E212C' />
+            {/* <Button action={handleRedirectionToShop} title="Learn More" arrow={true} /> */}
         </div>
     </section>
   )
