@@ -40,9 +40,10 @@ const mapContainerStyle = {
   height: '100vh',
 };
 const center = {
-  lat: 6.146678479714913, //  latitude of Amalgamated Market Traders Association Anambra State
-  lng: 6.7821905000000084, //  longitude of Amalgamated Market Traders Association Anambra State
+  lat: 6.147504314733941, //  latitude of Amalgamated Market Traders Association Anambra State
+  lng: 6.904693677166919, //  longitude of Amalgamated Market Traders Association Anambra State
 
+  
 };
 
 const MainMap = () => {
@@ -63,7 +64,7 @@ const MainMap = () => {
     <div>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
-        zoom={12}
+        zoom={16}
         center={center}
       >
         <Marker position={center} />

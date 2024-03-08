@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import {AnimatePresence, motion} from "framer-motion";
+import {AnimatePresence, motion, useAnimate, stagger, useInView} from "framer-motion";
 import carousel1 from "../../assets/home/carousel1.jpg";
 import carousel2 from "../../assets/home/carousel2.jpg";
 import carousel3 from "../../assets/home/carousel3.jpg";
@@ -18,13 +18,22 @@ const Hero = () => {
     const [carouselIndex, setCarouselIndex] = useState(2);
     const navigate = useNavigate();
 
+    // animation
+    const [scope, animate] = useAnimate();
+    const isInView = useInView(scope, {once:"true"});
+    useEffect(()=>{
+        if(isInView){
+            animate("div", {y:0, opacity:1}, {duration: 0.5, delay: stagger(0.3), ease:"easeOut"});
+        }
+    }, [isInView, animate])
+
+
     const slideShowData = useMemo(() => [
         carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel6, carousel7, carousel8
     ], []); // Empty array means it will only be calculated once
     
 
     useEffect(()=>{
-        
         const interval = setInterval(() => {
             setCarouselIndex((prevIndex) => (prevIndex + 1) % slideShowData.length);
         },3000);
@@ -46,7 +55,7 @@ const Hero = () => {
         navigate("/our-products")
     }
   return (
-    <section className="relative h-[87dvh] flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4 p-10 md:p-12">
+    <section className="relative h-[87dvh] flex flex-col md:flex-row items-center justify-center gap-12 md:gap-4 p-10 md:p-12">
         {/* image background */}
         <AnimatePresence>
             {slideShowData.map((image, index) => (
@@ -72,12 +81,25 @@ const Hero = () => {
         </div>
 
         {/* Header text */}
-        <div className="w-full md:max-w-[50%] relative z-10">
-            <h1 className="text-white text-[2.5rem] sm:text-[3rem] font-mont font-bold">Discover the Essence of Quality Baking</h1>
+        {/* <div className="w-full md:max-w-[50%] relative z-10"> */}
+            {/* <h1 className="text-white text-[2.5rem] sm:text-[3rem] font-mont font-bold">Discover the Essence of Quality Baking</h1>
             <h3 className="text-white text-base font-poppins font-normal md:max-w-[80%] my-4">From premium milk flavors to exquisite bakery materials, explore our NAFDAC-approved range crafted for perfection.</h3>
             <AboutButton action={handleRedirectionToShop} title="Learn More" arrow={true} color='white' border="none" hover='white'
-              bgHover='#FED5D9' bg='#7E212C' />
+              bgHover='#FED5D9' bg='#7E212C' /> */}
             {/* <Button action={handleRedirectionToShop} title="Learn More" arrow={true} /> */}
+        <div ref={scope} className="w-full md:max-w-[50%] relative text-center z-10">
+            <motion.div initial={{y:40, opacity:0}}>
+                <h1 className="overflow-hidden text-white text-[2.2rem] sm:text-[3rem] font-mont font-bold"> Discover the Essence of Quality Baking </h1>
+            </motion.div>
+            <motion.div initial={{y:40, opacity:0}}>
+                <h3 className="text-white text-base mx-auto font-poppins font-normal md:max-w-[80%] my-4">From premium milk flavors to exquisite bakery materials, explore our NAFDAC-approved range crafted for perfection.</h3>
+            </motion.div>
+            <motion.div initial={{y:40, opacity:0}}>
+                <div className="w-fit mx-auto">
+                <AboutButton action={handleRedirectionToShop} title="Learn More" arrow={true} color='white' border="none" hover='white'
+              bgHover='#FED5D9' bg='#7E212C' />
+                </div>
+            </motion.div>
         </div>
     </section>
   )

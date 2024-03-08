@@ -39,9 +39,9 @@ const Header = () => {
 
     // header-bg
   return (
-    <nav className={`w-full h-[13dvh] sticky top-0 left-0 z-50 bg-[#F8F9FA]  shadow-sm transition-all duration-300 overflow-x-clip`}>
+    <nav className={`w-full h-[14dvh] sticky -top-1 left-0 z-50 bg-[#F8F9FA]  shadow-sm transition-all duration-300 overflow-x-clip`}>
       <div className="flex justify-between items-center h-full mx-10 md:mx-12">
-          <div className="w-16 h-16">
+          <div className="w-14 h-14">
               <Link to="/">
                 {/* LOGO */}
                   <img src={logo} className="w-full h-auto object-cover" alt="brand logo" />
