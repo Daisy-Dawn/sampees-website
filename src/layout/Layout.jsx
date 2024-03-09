@@ -5,12 +5,12 @@ import ScrollToTop from '../components/ScrollToTop'
 
 const Layout = () => {
   return (
-    <>
+    <div className='overflow-x-clip'>
         <ScrollToTop />
         <Header />
         <Outlet />
         <Footer />
-    </>
+    </div>
   )
 }
 
