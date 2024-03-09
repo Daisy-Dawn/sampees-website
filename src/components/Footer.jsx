@@ -94,12 +94,12 @@ const Footer = () => {
         <div className='flex-[1] flex flex-col gap-4'>
           {/* social icons */}
           <div className='flex items-center gap-4'>
-            <div className='bg-[#7e212c] hover:bg-black p-1 text-white rounded-full cursor-pointer'>
+            <div className='bg-[#7e212c] hover:bg-black p-1 transition-all duration-300 text-white rounded-full cursor-pointer'>
               <a href='https://www.facebook.com/profile.php?id=61557285863744'>
                 <FaFacebook size={16} />
               </a>
             </div>
-            <div className='bg-[#7e212c] hover:bg-black p-1 text-white rounded-full cursor-pointer'>
+            <div className='bg-[#7e212c] hover:bg-black p-1 transition-all duration-300 text-white rounded-full cursor-pointer'>
               <a href='https://wa.link/4kb7e2'>
                 <FaWhatsapp size={16} />
               </a>

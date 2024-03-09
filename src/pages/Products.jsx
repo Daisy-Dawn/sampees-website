@@ -5,8 +5,7 @@ import {
   vanillalabel,
   milklabel,
   milklabelsealed
-} from '../assets'
-import { FaShoppingBasket } from 'react-icons/fa'
+} from '../assets';
 import FlavourProducts from './FlavourProducts'
 import {
   Tabs,
@@ -90,7 +89,7 @@ const Products = () => {
         {/* dark background */}
         <div className='bg-[#eef5f8] w-full product h-full absolute top-0 left-0'></div>
 
-        <div className='absolute top-1/2 left-0 flex  justify-between w-full px-1'>
+        <div className='absolute top-1/2 left-0 flex z-10 justify-between w-full px-1'>
           <div
             className='p-1 rounded-full bg-white shadow-sm cursor-pointer'
             onClick={handleNavigateLeft}
@@ -117,7 +116,6 @@ const Products = () => {
         <h1 className='text-blossom text-[1.3rem] px-[1rem] lg:px-0 sm:text-[1.8rem] lg:text-[3rem] uppercase font-mont font-bold'>
           Explore our products
         </h1>
-        <FaShoppingBasket className='text-blossom hidden sm:block size-[20px] sm:size-[28px] lg:size-[35px]' />
       </motion.div>
 
       <div className=''>
