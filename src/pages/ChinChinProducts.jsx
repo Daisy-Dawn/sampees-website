@@ -36,6 +36,7 @@ const ChinChinProducts = () => {
           key={index} 
           header={flavour.header} 
           description={flavour.description} 
+          ingredients={flavour.ingredients}
           gramsBig={flavour.grams.big}
           gramsSmall={flavour.grams.small} 
           productImageBig={flavour.productImages.big} 

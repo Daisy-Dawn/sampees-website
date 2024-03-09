@@ -44,8 +44,7 @@ const Footer = () => {
 ]
 
   return (
-    <footer className="bg-[#F8F9FA] p-12  font-mont">
-      
+    <footer className="bg-[#F8F9FA] px-4 sm:px-10 md:px-12 py-12 font-mont">
       <div className="flex flex-wrap gap-6">
         {/* brand group */}
         <div className="flex-[2]">
