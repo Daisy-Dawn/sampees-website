@@ -132,7 +132,7 @@ const About = () => {
             className='md:text-[1.2rem] text-[1rem] font-poppins capitalize text-justify text-bark font-normal leading-[25px] lg:leading-[30px]'
           >
             At Sampees Global Resources Limited, we are passionate about
-            inspiring creativity and elevating your baked goods and confections
+            inspiring creativity and elevating your baked goods and confectionary
             with our premium flavor powders. We believe that every detail, from
             the finest ingredients to expert blending, contributes to the
             extraordinary taste experience.
