@@ -269,7 +269,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="w-full h-screen rounded-[0.625rem]">
+      <div className="w-full mt-[3rem] h-screen rounded-[0.625rem]">
         <Map />
       </div>
     </div>

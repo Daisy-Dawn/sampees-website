@@ -1,75 +1,8 @@
-// import { useState } from "react";
-// import {
-//     APIProvider,
-//     Map,
-//     AdvancedMarker,
-//     Pin,
-//     InfoWindow
-// } from "@vis.gl/react-google-maps";
-
-
-// const MainMap = ()=>{
-//     const position = {
-//         lat: 6.146678479714913, //  latitude of Amalgamated Market Traders Association Anambra State
-//         lng: 6.7821905000000084, //  longitude of Amalgamated Market Traders Association Anambra State
-//     }
-
-//     return (
-//         <APIProvider apiKey="AIzaSyDX827Jmc72b86DU0AWJVIPxSjlAwXjlXw">
-//             <div className="w-full h-screen">
-//                 <Map zoom={12} center={position}>
-//                     <AdvancedMarker position={position}></AdvancedMarker>
-//                 </Map>
-//             </div>
-//         </APIProvider>
-//     )
-// }
-
-
-// export default MainMap;
-
-
-
-
-
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
-
-const libraries = ['places'];
-const mapContainerStyle = {
-  width: '100%',
-  height: '100vh',
-};
-const center = {
-  lat: 6.147504314733941, //  latitude of Amalgamated Market Traders Association Anambra State
-  lng: 6.904693677166919, //  longitude of Amalgamated Market Traders Association Anambra State
-
-  
-};
 
 const MainMap = () => {
-    const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyDX827Jmc72b86DU0AWJVIPxSjlAwXjlXw',
-        libraries,
-      });
-    
-      if (loadError) {
-        return <div>Error loading maps</div>;
-      }
-    
-      if (!isLoaded) {
-        return <div>Loading maps</div>;
-      }
 
   return (
-    <div>
-      <GoogleMap
-        mapContainerStyle={mapContainerStyle}
-        zoom={16}
-        center={center}
-      >
-        <Marker position={center} />
-      </GoogleMap>
-    </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.77428735117!2d6.844642274854162!3d6.160976693826251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10439166c781cee3%3A0x3713f08a203fdd2e!2sSam%20Choprite%20Foods!5e0!3m2!1sen!2sng!4v1709983339937!5m2!1sen!2sng"  className='w-full h-screen' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
   )
 }
 

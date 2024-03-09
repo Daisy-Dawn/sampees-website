@@ -20,6 +20,7 @@ const FlavourProducts = () => {
         big: '500g',
         small: '100g'
       },
+      bg: '#F8F9FA',
       productImages: {
         big: milkFlavourBig,
         small: milkFlavourSmall
@@ -34,6 +35,7 @@ const FlavourProducts = () => {
       grams: {
         small: '100g'
       },
+      bg: '#fff',
       productImages: {
         small: vanillaFlavour
       }
@@ -47,6 +49,7 @@ const FlavourProducts = () => {
       grams: {
         small: '80g'
       },
+      bg: '#F8F9FA',
       productImages: {
         small: bananaFlavour
       }
@@ -60,6 +63,7 @@ const FlavourProducts = () => {
       grams: {
         small: '80g'
       },
+      bg: '#fff',
       productImages: {
         small: CoconutFlavour
       }
@@ -73,6 +77,7 @@ const FlavourProducts = () => {
       grams: {
         small: '80g'
       },
+      bg: '#F8F9FA',
       productImages: {
         small: pineappleFlavour
       }
@@ -84,6 +89,7 @@ const FlavourProducts = () => {
       {flavours.map((flavour, index) => (
         <ProductWithIngredients
           key={index}
+          bg={flavour.bg}
           header={flavour.header}
           description={flavour.description}
           ingredients={flavour.ingredients}

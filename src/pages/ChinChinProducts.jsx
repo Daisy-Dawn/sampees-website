@@ -10,6 +10,7 @@ const ChinChinProducts = () => {
         small:"60g"
       },
       ingredients:"Wheat Flour, Sugar, Margarine, Vegetable Oil, Milk Powder, Egg, Iodized Salt, Flavour (De-Sunnex)",
+      // bg: '#eef5f8',
       
       productImages:{
         small: chinchin

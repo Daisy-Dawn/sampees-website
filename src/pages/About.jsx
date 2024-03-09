@@ -67,7 +67,7 @@ const About = () => {
     {
       question: 'Do your flavor powders contain any allergens?',
       answer:
-        'We clearly label all allergens on our packaging, making it easy for you to make informed choices. If you have any specific allergen concerns, please refer to the individual product information or contact us directly.'
+        'We clearly label all allergens on our packaging, making it easy for you to make informed choices. More detailed information is in the product section of each flavour, located in the Products Page. If you have any specific allergen concerns, please refer to the individual product information or contact us directly.'
     },
     {
       question: 'How much flavor powder should I use in my recipe?',
@@ -97,7 +97,7 @@ const About = () => {
     {
       question: 'Do you offer bulk ordering options for businesses?',
       answer:
-        "Yes, we offer bulk ordering options for businesses looking to purchase larger quantities of our flavor powders. Whether you're a bakery, restaurant, or food manufacturer, we can accommodate your bulk order needs. Please reach out to our sales team using the chat support or directly sending a dm through any of our social handles for more information on pricing and ordering options or come directly to our offline store."
+        "Yes, we offer bulk ordering options for businesses looking to purchase larger quantities of our flavor powders. Whether you're a bakery, restaurant, or food manufacturer, we can accommodate your bulk order needs. Please reach out to our sales team using the chat support or directly sending a dm through any of our social handles for more information on pricing and ordering options or come directly to our offline store. Go to the Contacts Page for more information on our offline stores to make your purchase or send us a message our comapny email, whatsapp, facebook or the chat support in the app"
     }
   ]
 
@@ -161,7 +161,7 @@ const About = () => {
       </div>
 
       {/* COMPANY HISTORY */}
-      <div className='bg-[#F8F9FA] px-[1rem] lg:px-[3rem] 2xl:px-[9rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center md:gap-[1.5rem] lg:gap-[3rem] gap-[3rem]'>
+      <div className='bg-[#fff] px-[1rem] lg:px-[3rem] 2xl:px-[9rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center md:gap-[1.5rem] lg:gap-[3rem] gap-[3rem]'>
         <ScrollSurface>
           <div className='lg:h-[40rem] md:h-full h-[21rem]'>
             <img
@@ -212,7 +212,7 @@ const About = () => {
       </div>
 
       {/* MISSION AND VALUES */}
-      <div className='bg-[#F8F9F] px-[1rem] 2xl:px-[9rem] lg:px-[3rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center gap-[3rem]'>
+      <div className='bg-[#F8F9FA] px-[1rem] 2xl:px-[9rem] lg:px-[3rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center gap-[3rem]'>
         <ScrollSurface>
           <div className='flex gap-[1.7rem] flex-col '>
             <Surface justify='start'>
@@ -289,7 +289,7 @@ const About = () => {
       </div>
 
       {/* PRODUCTION PROCESS */}
-      <div className='bg-[#F8F9FA] header-bg px-[1rem] lg:px-[3rem] 2xl:px-[9rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center gap-[3rem]'>
+      <div className='bg-[#fff] px-[1rem] lg:px-[3rem] 2xl:px-[9rem] py-[4rem] xl:py-[6rem] 2xl:py-[9rem] grid md:grid-cols-2 grid-cols-1 items-center gap-[3rem]'>
           <div className='order-2 md:order-1'>
             <ScrollSurface>
               <div className='grid  grid-cols-2 '>
@@ -488,7 +488,7 @@ const About = () => {
 
       {/* FAQS */}
         <ScrollSurface>
-      <div className=' px-[1rem] 2xl:px-[9rem] lg:px-[3rem] pt-[1rem] pb-[5rem] flex flex-col items-center gap-[2rem]'>
+      <div className='bg-[#fff] px-[1rem] 2xl:px-[9rem] lg:px-[3rem] pt-[1rem] pb-[5rem] flex flex-col items-center gap-[2rem]'>
           <Surface>
             <div className='flex gap-[1.5rem] items-center'>
               <img src={faqIcon} alt='' />

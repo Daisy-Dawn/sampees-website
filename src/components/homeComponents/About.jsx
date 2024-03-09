@@ -48,7 +48,7 @@ const About = () => {
                 <h2 className="text-[1.6rem] sm:text-[2.5rem] font-semibold font-mont">About Us</h2>
               </Surface>
               <Surface>
-                <p className="lg:w-[60%] text-center mt-4 font-poppins text-base leading-6">
+                <p className="lg:w-[60%] text-center mt-4  font-poppins text-base leading-6">
                     At Sampees Global Resources Limited, We Are Passionate About Inspiring 
                     Creativity And Elevating Your Baked Goods And Confections With Our 
                     Premium Flavor Powders. We Believe That Every Detail, From The Finest 

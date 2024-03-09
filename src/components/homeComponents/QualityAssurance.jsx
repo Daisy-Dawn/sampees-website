@@ -18,12 +18,12 @@ const QualityAssurance = () => {
         {/* second blob vector */}
         <img src={vector1} className="opacity-50w-full w-[4rem] sm:w-[8rem] left-0 top-[10%] md:top-[10%] absolute" alt="blob" />
         {/* quality assurance points group */}
-        <div className="relative flex flex-col w-full gap-36 lg:gap-[12rem] mt-60 sm:mt-80">
+        <div className="relative flex flex-col w-full gap-36 lg:gap-[15rem] mt-60 sm:mt-80">
           
 
           {/* card1 */}
           <ScrollSurface>
-            <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+            <div className="flex flex-col mb-[3rem] md:flex-row items-center justify-between gap-2">
               <div className="flex gap-1 md:max-w-[60%]">
                   <motion.span initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:0.8, delay:0.2}} viewport={{once:true}}  className="text-[1rem] font-semibold font-poppins text-[#7e212c] mt-2">01</motion.span>
                   <motion.div initial={{opacity:0.6}} whileInView={{opacity:1}} transition={{duration:2}} >
