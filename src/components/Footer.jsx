@@ -57,9 +57,7 @@ const Footer = () => {
             bakery and confectionery sector, is officially registered with the
             Corporate Affairs Commission (CAC).
           </h3>
-          <p className='text-sm text-black font-semibold'>
-            Copyright S.G.R LTD
-          </p>
+          
         </div>
 
         {/* contact group */}
