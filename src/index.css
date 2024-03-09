@@ -323,7 +323,6 @@ background-color:#fcfbf3;
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: #3b82f6; */
     border-radius: 0.625rem;
     z-index: -2;
   }
@@ -344,3 +343,6 @@ background-color:#fcfbf3;
   .button:hover::before {
     width: 100%;
   }
+  .nopage {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(80,216,216,1) 0%, rgba(80,216,216,0.52) 46.9%, rgba(80,216,216,0.84) 100.2% );
+} 

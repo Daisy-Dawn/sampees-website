@@ -38,6 +38,7 @@ import machine41 from '../assets/home/machine41.png'
 import vector1 from '../assets/home/vector1.png'
 import vector2 from '../assets/home/vector2.png'
 import machine44 from '../assets/home/machine44.png'
+import noPage from '../assets/home/noPage.jpg'
 
 export {
 icon_label, staffs, CEO, machine1, machine2, machine3, machine4,nafdac,faqIcon,
@@ -45,6 +46,6 @@ icon_label, staffs, CEO, machine1, machine2, machine3, machine4,nafdac,faqIcon,
     vanillalabel,logo,building1, bananaFlavour, chinchin,CoconutFlavour,
     milkFlavourBig,milkFlavourSmall, pineappleFlavour,vanillaFlavour, bread,bread2,
     chef,meatpie, popcorn, smallchops,chef2, chef3, chef4,cake,vector1,vector2,machine44, corn2,
-    corn1,machine41,
+    corn1,machine41,noPage,
 }
 // danobig,danosmall,

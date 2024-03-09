@@ -5,8 +5,8 @@ import {
   milkFlavourSmall,
   pineappleFlavour,
   vanillaFlavour
-} from '../assets';
-import ProductWithIngredients from '../components/Product';
+} from '../assets'
+import ProductWithIngredients from '../components/Product'
 
 const FlavourProducts = () => {
   const flavours = [

@@ -1,11 +1,8 @@
 import React, { Suspense, useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './layout/Layout'
-import PreLoader from './pages/PreLoader'
 import Skeleton from './pages/Skeleton'
-// import { Skeleton } from '@mui/material'
 
-// Lazy load your pages
 const LazyHome = React.lazy(() => import('./pages/Home'))
 const LazyAbout = React.lazy(() => import('./pages/About'))
 const LazyContact = React.lazy(() => import('./pages/Contact'))
