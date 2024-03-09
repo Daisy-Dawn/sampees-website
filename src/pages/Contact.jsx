@@ -209,7 +209,7 @@ const Contact = () => {
             <div className='flex flex-row lg:flex-row items-center mb-4 gap-4 lg:gap-2'>
               <MdOutlineLocationOn size={24} />
               <p className='max-w-[80%] text-left lg:text-start capitalize text-base'>
-                Chi Bakers, opposite yembtol petrol stateion, Apata ibadan
+                Chi Bakers, opposite yembtol petrol station, Apata ibadan
               </p>
             </div>
             <div className='flex flex-row lg:flex-row items-center gap-4 lg:gap-2'>
