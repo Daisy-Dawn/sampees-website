@@ -11,16 +11,16 @@ const Contact = () => {
         navigate("/contact-us");
     }
   return (
-    <section className="relative flex justify-center p-10 md:p-12 mt-24 z-20">
+    <section className="relative flex justify-center p-10 md:p-[6rem] mt-24 z-20">
         {/* background image */}
         <img 
             src={hamburger} 
-            className="absolute w-full h-full object-cover top-0 left-0 -z-10"
+            className="absolute w-full h-full object-cover top-0  left-0  -z-10"
             alt="hamburger" 
             loading="lazy"
         />
         {/* dark background */}
-        <div className="bg-black bg-opacity-30 w-full h-full absolute top-0 left-0 -z-10"></div>
+        <div className="bg-bark bg-opacity-30 w-full h-full absolute top-0 left-0 -z-10"></div>
 
         {/* cta container */}
         <ScrollSurface>

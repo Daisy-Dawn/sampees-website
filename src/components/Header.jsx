@@ -1,5 +1,5 @@
 import {useState}  from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import Button from "./Button";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
@@ -9,6 +9,8 @@ import AboutButton from '../components/AboutButton'
 
 
 const Header = () => {
+    const location = useLocation();
+    const [activeLink, setActiveLink] = useState(location.pathname)
     const navigate = useNavigate();
     const [revealNav, setRevealNav] = useState(false);
     const handleNavigationToContactDesktop = ()=>{
@@ -18,6 +20,10 @@ const Header = () => {
         navigate("/contact-us");
         setRevealNav(!revealNav);
     }
+    const handleNavLinkClick = (link) => {
+        setActiveLink(link);
+      };
+
     const navLinks = [
         {
             title:"Home",
@@ -53,8 +59,8 @@ const Header = () => {
                   {navLinks.map(link => (
                       <li 
                           key={link.title} 
-                          className={`font-mont font-medium text-[#77808B] text-sm lg:text-base cursor-pointer`}
-                      ><NavLink to={link.anchor}>{link.title}</NavLink></li>
+                          className={`font-mont ${activeLink === link.anchor ? 'text-blossom' : 'text-black'} font-semibold  text-sm lg:text-base cursor-pointer`}
+                      ><NavLink onClick={() => handleNavLinkClick(link.anchor)}  to={link.anchor}>{link.title}</NavLink></li>
                   ))}
               </ul>
               <div className="hidden md:block">
@@ -70,8 +76,8 @@ const Header = () => {
               className="md:hidden flex flex-col gap-10 justify-center absolute top-0 right-0 transition-all duration-300 bg-white w-1/2 h-dvh rounded-l-[0.625rem]">
               <ul className="flex flex-col items-center gap-8">
                   {navLinks.map(link => (
-                      <li key={link.title} onClick={()=> setRevealNav(!revealNav)} className="font-header text-[#77808B] text-xl cursor-pointer">
-                        <NavLink to={link.anchor} className="flex items-center gap-1 group">
+                      <li key={link.title} onClick={()=> setRevealNav(!revealNav)} className={`font-header ${activeLink === link.anchor ? 'text-blossom' : 'text-black'} text-xl cursor-pointer`}>
+                        <NavLink onClick={() => handleNavLinkClick(link.anchor)} to={link.anchor} className="flex items-center gap-1 group">
                             {link.title} 
                             <div className="group-hover:translate-x-1 group-hover:-translate-y-1  transform transition-all duration-300"><MdOutlineArrowOutward size={12} /></div>
                         </NavLink>

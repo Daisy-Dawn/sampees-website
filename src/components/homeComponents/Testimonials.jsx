@@ -32,7 +32,7 @@ const Testimonials = () => {
   return (
     <ScrollSurface>
       <div className="flex flex-col items-center gap-4 p-12 py-24">
-          <h2 className="text-[1.6rem] sm:text-[2.5rem] lg:text-[3rem] font-semibold font-mont">Testimonials</h2>
+          <h2 className="text-[1.8rem] sm:text-[2.5rem] lg:text-[3rem] font-bold md:font-semibold font-mont">Testimonials</h2>
           <h3 className="text-base lg:text-[1.7rem] text-blossom font-medium font-mont italic text-center">What our clients are saying</h3>
           <div className="flex gap-8 flex-col sm:items-center md:justify-around flex-wrap md:flex-row mt-4">
             {testimonials.map((testimonial, index)=>(

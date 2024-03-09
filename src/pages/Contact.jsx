@@ -133,7 +133,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="md:p-12 lg:p-[1.5rem] xl:p-[3rem] p-[1rem] ">
+    <div className="md:p-12 lg:p-[1.5rem] contact-bg xl:p-[3rem] p-[1rem] ">
       <div>
         <h2 className="text-[1.6rem] sm:text-[2.5rem] font-semibold font-mont text-center">Contact Us</h2>
         <h3 className="text-base font-semibold font-mont text-center text-blossom mt-4">Any question or remarks? Just write us a message!</h3>
