@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
-import Button from "../components/Button";
 import AboutButton from "../components/AboutButton";
 import Map from "../components/MainMap";
 import emailjs from '@emailjs/browser';
@@ -94,7 +93,6 @@ const Contact = () => {
     e.preventDefault();
 
     if(validateForm()){
-      console.log('successfull!!!!!!!!')
       // send the email to the client
       const serviceId = 'service_0rc00vp'
       const templateId = 'template_g9l3kj7'
@@ -161,7 +159,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
               <MdOutlineLocationOn size={24} />
-              <p className="max-w-[80%] text-left lg:text-start text-base">Block D Shop 8 Almagamated  Bakery Int'l Market, Ogidi, Anambra State</p>
+              <p className="max-w-[80%] text-left lg:text-start text-base">Block D Shop 8 Almagamated  Bakery Int&#39;l Market, Ogidi, Anambra State</p>
             </div>
           </div>
 
@@ -210,34 +208,11 @@ const Contact = () => {
               <p className="text-base">+234-8062433495</p>
               </div>
             </div>
-            {/* <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
-              <MdOutlinePhoneInTalk size={24} />
-              <p className="text-base">+234-8062433495</p>
-            </div> */}
           </div>
-
-          {/* <div>
-          <h2 className="mb-[0.5rem] font-mont text-center md:text-left text-[1rem] font-bold text-blossom">KANO BRANCH OFFICE 2</h2>
-            <div className="flex flex-row lg:flex-row items-center mb-4 gap-4 lg:gap-2">
-              <MdOutlineLocationOn size={24} />
-              <p className="max-w-[80%] text-left lg:text-start  text-base">Shop 32 Awolowo Modern Market Olosha, Mushin Lagos</p>
-            </div>
-            <div className="flex flex-row lg:flex-row items-center gap-4 lg:gap-2">
-              <MdOutlinePhoneInTalk size={24} />
-              <p className="text-base">+234-8032301963</p>
-            </div>
-          </div> */}
-
-          {/* <div> */}
           <div className="flex items-center gap-4">
             <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><a href="https://www.facebook.com/profile.php?id=61557285863744"><FaFacebook size={16}/></a></div>
-            {/* <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaInstagram size={16}/></Link></div> */}
-            {/* <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><Link to="/"><FaTwitter size={16}/></Link></div> */}
             <div className="bg-black p-1 text-white rounded-full cursor-pointer  hover:bg-[#7e212c] transition-colors duration-300"><a href="https://wa.link/4kb7e2"><FaWhatsapp size={16}/></a></div>
           </div>
-
-          {/* </div> */}
-
         </div>
         
         <div className="lg:flex-[2] order-1 lg:order-2 px-2 lg:px-0 2xl:px-8  md:px-8 pt-8">
@@ -290,7 +265,6 @@ const Contact = () => {
             <div className="justify-self-end col-span-2">
             <AboutButton title="Get Quote" color='white' hover='white'
               bgHover='#FED5D9' bg='#7E212C' action={handleFormSubmission} />
-              {/* <Button title="Send Message" type="submit" action={handleFormSubmission} /> */}
             </div>
           </form>
         </div>

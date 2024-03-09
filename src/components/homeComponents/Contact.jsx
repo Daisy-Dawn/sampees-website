@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router";
 import hamburger from "../../assets/home/hamburger1.jpg";
-import Button from "../Button";
 import AboutButton from "../AboutButton";
 import ScrollSurface from "../animation/ScrollSurface";
 

@@ -1,14 +1,9 @@
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
-// import { FaInstagram } from "react-icons/fa6";
-// import { FaTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
-import instaBg from "../../assets/home/back.png";
-import baker3 from "../../assets/home/bakerr3.jpg";
 import Surface from "../animation/Surface";
 import {motion, useTransform, useScroll, useAnimate, useInView, stagger} from "framer-motion";
-import {chef, chef2, chef3, chef4} from '../../assets'
+import {chef3} from '../../assets'
 
 const About = () => {
   const ref = useRef(null);
@@ -65,13 +60,6 @@ const About = () => {
                   <motion.div initial={{opacity:0, y:40}} className="bg-[#3b5998] p-1 text-white rounded-full cursor-pointer">
                   <a href="https://www.facebook.com/profile.php?id=61557285863744"><FaFacebook size={16}/></a>
                   </motion.div>
-                  {/* <motion.div initial={{opacity:0, y:40}} className="p-1 text-white rounded-full cursor-pointer relative">
-                    <img src={instaBg} className="absolute top-0 left-0 w-full h-full -z-10" alt="instagram background color" />
-                    <Link to="/"><FaInstagram size={16}/></Link>
-                  </motion.div> */}
-                  {/* <motion.div initial={{opacity:0, y:40}} className="bg-[#55ACEE] p-1 text-white rounded-full cursor-pointer">
-                    <Link to="/"><FaTwitter size={16}/></Link>
-                  </motion.div> */}
                   <motion.div initial={{opacity:0, y:40}} className="bg-[#25D366] p-1 text-white rounded-full cursor-pointer">
                   <a href="https://wa.link/4kb7e2"><FaWhatsapp size={16}/></a>
                   </motion.div>
@@ -82,4 +70,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;

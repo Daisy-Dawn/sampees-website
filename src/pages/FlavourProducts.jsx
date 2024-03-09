@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import {
   bananaFlavour,
   CoconutFlavour,
@@ -6,10 +5,8 @@ import {
   milkFlavourSmall,
   pineappleFlavour,
   vanillaFlavour
-} from '../assets'
-import { useNavigate } from 'react-router-dom'
-import ProductWithIngredients from '../components/Product'
-// import { ProductWithIngredients } from '../components/Product'
+} from '../assets';
+import ProductWithIngredients from '../components/Product';
 
 const FlavourProducts = () => {
   const flavours = [

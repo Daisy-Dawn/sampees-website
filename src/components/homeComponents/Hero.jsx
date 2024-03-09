@@ -1,7 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import {AnimatePresence, motion, useAnimate, stagger, useInView} from "framer-motion";
-import Button from "../Button";
 import AboutButton from "../AboutButton";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";

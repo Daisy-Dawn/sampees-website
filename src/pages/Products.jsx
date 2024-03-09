@@ -3,7 +3,6 @@ import {
   chinChinlabel,
   milkproduct1,
   vanillalabel,
-  // chinChinCarton,
   milklabel,
   milklabelsealed
 } from '../assets'

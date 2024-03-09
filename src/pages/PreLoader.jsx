@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
-import anime from 'animejs'
-import { logo } from '../assets'
+import { useEffect } from 'react';
+import anime from 'animejs';
 
 const PreLoader = () => {
   useEffect(() => {
@@ -54,20 +53,20 @@ const PreLoader = () => {
 
   return (
     <div className='w-screen flex justify-center items-center circle-spinner h-screen'>
-        <div className="sk-circle">
-  <div className="sk-circle1 sk-child"></div>
-  <div className="sk-circle2 sk-child"></div>
-  <div className="sk-circle3 sk-child"></div>
-  <div className="sk-circle4 sk-child"></div>
-  <div className="sk-circle5 sk-child"></div>
-  <div className="sk-circle6 sk-child"></div>
-  <div className="sk-circle7 sk-child"></div>
-  <div className="sk-circle8 sk-child"></div>
-  <div className="sk-circle9 sk-child"></div>
-  <div className="sk-circle10 sk-child"></div>
-  <div className="sk-circle11 sk-child"></div>
-  <div className="sk-circle12 sk-child"></div>
-</div>
+      <div className="sk-circle">
+        <div className="sk-circle1 sk-child"></div>
+        <div className="sk-circle2 sk-child"></div>
+        <div className="sk-circle3 sk-child"></div>
+        <div className="sk-circle4 sk-child"></div>
+        <div className="sk-circle5 sk-child"></div>
+        <div className="sk-circle6 sk-child"></div>
+        <div className="sk-circle7 sk-child"></div>
+        <div className="sk-circle8 sk-child"></div>
+        <div className="sk-circle9 sk-child"></div>
+        <div className="sk-circle10 sk-child"></div>
+        <div className="sk-circle11 sk-child"></div>
+        <div className="sk-circle12 sk-child"></div>
+      </div>
     </div>
     
   )

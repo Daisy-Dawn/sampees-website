@@ -1,4 +1,3 @@
-import Button from "../Button"
 import { useNavigate } from "react-router-dom";
 import AboutButton from "../AboutButton";
 
@@ -23,7 +22,6 @@ const FeaturedComponent = ({image, header, body}) => {
         <div className="text-center">
         <AboutButton action={handleNavigationToProductPage} title="View More"  color='white' border="none" hover='white'
               bgHover='#FED5D9' bg='#7E212C' />
-            {/* <Button title="View More" action={handleNavigationToProductPage} /> */}
         </div>
     </div>
   )

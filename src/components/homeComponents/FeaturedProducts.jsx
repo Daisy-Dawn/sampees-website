@@ -1,6 +1,5 @@
-
-import FeaturedComponent from "./FeaturedComponent"
-import {CoconutFlavour, milkFlavourSmall, bananaFlavour, vanillaFlavour} from '../../assets'
+import FeaturedComponent from "./FeaturedComponent";
+import {CoconutFlavour, milkFlavourSmall, bananaFlavour} from '../../assets';
 import ScrollSurface from "../animation/ScrollSurface";
 import Staggered from "../animation/Staggered";
 
@@ -24,6 +23,7 @@ const FeaturedProducts = () => {
       body:"80g" 
     },
   ]
+  
   return (
     <ScrollSurface>
       <section className="flex flex-col items-center p-[1.5rem] lg:p-12 mt-24">

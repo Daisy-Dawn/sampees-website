@@ -3,12 +3,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
-// import { FaInstagram } from "react-icons/fa6";
-// import { FaTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { logo } from "../assets";
-import AboutButton from "./AboutButton";
 import { useState } from "react";
 import Swal from 'sweetalert2'
 
@@ -79,8 +76,6 @@ const Footer = () => {
           {/* social icons */}
           <div className="flex items-center gap-4">
             <div className="bg-[#7e212c] hover:bg-black p-1 text-white rounded-full cursor-pointer"><a href="https://www.facebook.com/profile.php?id=61557285863744"><FaFacebook size={16}/></a></div>
-            {/* <div className="bg-[#7e212c] p-1 text-white rounded-full cursor-pointer"><Link to="/"><FaInstagram size={16}/></Link></div>
-            <div className="bg-[#7e212c] p-1 text-white rounded-full cursor-pointer"><Link to="/"><FaTwitter size={16}/></Link></div> */}
             <div className="bg-[#7e212c] hover:bg-black p-1 text-white rounded-full cursor-pointer"><a href="https://wa.link/4kb7e2"><FaWhatsapp size={16}/></a></div>
           </div>
           <p className="text-[#77808B] text-base">Follow us on social media for the latest updates, offers, and sweet inspirations from our bakery to your table.</p>
@@ -109,8 +104,6 @@ const Footer = () => {
           <form onSubmit={onSubmitForm} className="flex flex-col gap-3">
             <label htmlFor="email" className="text-base text-[#77808B]">Your Email</label>
             <input className="p-2 rounded-[0.625rem] border border-solid border-[#7e212c] outline-none placeholder:text-sm text-sm" placeholder="johndoe@mail.com" value={email} onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" />
-            {/* <AboutButton title="Subscribe" action='#' color='white' border="none" hover='white'
-              bgHover='#FED5D9' bg='#7E212C' /> */}
             <button 
               type="submit"
               className="group hover:bg-bark text-center gap-4 bg-[#7e212c] text-white py-[0.55rem] px-6 rounded-[0.625rem] font-mont font-bold text-base transition-all duration-300" 
@@ -118,7 +111,6 @@ const Footer = () => {
               Subscribe
             </button>
           </form>
-          
         </div>
       </div>
     </footer>

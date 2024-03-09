@@ -1,12 +1,10 @@
 import nafdac from "../../assets/about/nafdac.png";
 import vector1 from "../../assets/home/Vector.svg";
 import vector2 from "../../assets/home/Vector1.svg";
-import ingredient2 from "../../assets/home/ingredients3.png";
-import machine from "../../assets/home/machine3.png";
 import ScrollSurface from "../animation/ScrollSurface";
 import Surface from "../animation/Surface";
 import {motion} from "framer-motion";
-import {corn1, corn2, machine4, machine41, machine44} from '../../assets'
+import { corn2, machine41 } from '../../assets';
 
 const QualityAssurance = () => {
   return (
