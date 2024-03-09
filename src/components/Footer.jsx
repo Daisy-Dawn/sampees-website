@@ -42,7 +42,7 @@ const Footer = () => {
 
   return (
     <footer className='bg-[#F8F9FA] px-4 sm:px-10 md:px-12 py-12 font-mont'>
-      <div className='flex flex-wrap gap-6'>
+      <div className='flex  items-center flex-wrap gap-6'>
         {/* brand group */}
         <div className='flex-[2]'>
           <div>
