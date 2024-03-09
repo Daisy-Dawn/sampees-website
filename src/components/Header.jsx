@@ -51,7 +51,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`w-full h-[14dvh] sticky -top-1 left-0 z-50 bg-[#F8F9FA]  shadow-sm transition-all duration-300 overflow-x-clip`}
+      className={`w-full h-[14vh] sticky -top-1 left-0 z-50 bg-[#F8F9FA]  shadow-sm transition-all duration-300 overflow-x-clip`}
     >
       <div className='flex justify-between items-center h-full mx-4 sm:mx-10 md:mx-12'>
         <div className='w-14 h-14'>
@@ -98,7 +98,7 @@ const Header = () => {
               ? { transform: 'translateX(0)' }
               : { transform: 'translateX(100%)' }
           }
-          className='md:hidden flex flex-col gap-10 justify-center absolute top-0 right-0 transition-all duration-300 bg-white w-1/2 h-dvh rounded-l-[0.625rem]'
+          className='md:hidden flex flex-col gap-10 justify-center absolute top-0 right-0 transition-all duration-300 bg-white w-1/2 h-screen rounded-l-[0.625rem]'
         >
           <ul className='flex flex-col items-center gap-8'>
             {navLinks.map(link => (
