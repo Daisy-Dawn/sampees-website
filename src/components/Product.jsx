@@ -48,7 +48,7 @@ const ProductWithIngredients = ({
           </h2>
         </Surface>
         <Surface justify='start'>
-          <p className='text-bark text-[1.1rem] font-poppins font-medium'>
+          <p className='text-bark text-[0.8rem] lg:text-[1.1rem] font-poppins font-medium'>
             {ingredients}
           </p>
         </Surface>
