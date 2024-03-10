@@ -392,7 +392,7 @@ const About = () => {
                     Quality Assurance and Compliance:{' '}
                   </span>
                   <br />
-                  All products exceed NAFDAC requirements and undergo rigorous
+                  All products meet NAFDAC requirements and undergo rigorous
                   testing to ensure the highest quality reaches customers,
                   ensuring our flavor powders consistently meet the highest
                   standards of quality and safety.
