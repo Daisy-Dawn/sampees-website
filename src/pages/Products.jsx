@@ -4,7 +4,8 @@ import {
   milkproduct1,
   vanillalabel,
   milklabel,
-  milklabelsealed
+  milklabelsealed,
+  milksmall2, milkSmall, milksmall3, milksmall4,
 } from '../assets';
 import FlavourProducts from './FlavourProducts'
 import {
@@ -24,11 +25,14 @@ const Products = () => {
   const [carouselIndex, setCarouselIndex] = useState(2)
   const slideShowData = useMemo(
     () => [
+      milksmall4,
       chinChinlabel,
       milkproduct1,
       vanillalabel,
+      milksmall3,
       milklabel,
-      milklabelsealed
+      milklabelsealed,
+      
     ],
     []
   ) // Empty array means it will only be calculated once

@@ -11,7 +11,8 @@ import {
   machine4,
   nafdac,
   staffs,
-  building1
+  building1,
+  logo
 } from '../assets'
 import {
   Accordion,
@@ -274,16 +275,16 @@ const About = () => {
         </ScrollSurface>
         <ScrollSurface>
           <div className=' flex flex-col'>
-            <div className='md:h-[23rem] h-[11rem] '>
+            {/* <div className='md:h-[23rem] h-[11rem] '>
               <img
-                className='w-full h-full skeleton rounded-[10px] border-2 border-white object-cover'
-                src={CEO}
+                className='w-full h-full object-contain'
+                src={logo}
                 alt=''
               />
             </div>
             <p className='text-blossom font-medium text-[0.8rem] md:text-[1rem] mt-[0.5rem] mb-[1.5rem] 2xl:mb-[1.5rem] md:mb-[4rem] capitalize font-poppins'>
               CEO Sampees Global Resources limited
-            </p>
+            </p> */}
             <div className='md:h-[23rem] h-[11rem] '>
               <img
                 className='w-full h-full skeleton rounded-[10px] border-2 border-white object-cover '

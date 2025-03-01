@@ -33,11 +33,16 @@ import corn2 from '../assets/home/corn2.jpeg'
 import machine41 from '../assets/home/machine41.png'
 import machine44 from '../assets/home/machine44.png'
 import noPage from '../assets/home/noPage.jpg'
+import milkSmall from '../assets/products/milkSmall.jpg'
+import milksmall2 from '../assets/products/milksmall2.jpg'
+import milksmall3 from '../assets/products/milksmall3.jpg'
+import milksmall4 from '../assets/products/milksmall4.jpg'
+import milksmall2bg from '../assets/products/milksmall2bg.png'
 
 export {
 icon_label, staffs, CEO, machine1, machine2, machine3, machine4,nafdac,faqIcon,
     chinChinCarton,chinChinlabel,milklabel,milklabelsealed,milkproduct1,
     vanillalabel,logo,building1, bananaFlavour, chinchin,CoconutFlavour,
     milkFlavourBig,milkFlavourSmall, pineappleFlavour,vanillaFlavour, bread,bread2, meatpie, popcorn, smallchops, chef3, cake,machine44, corn2,
-    machine41,noPage,
+    machine41,noPage, milksmall2, milkSmall, milksmall3, milksmall4, milksmall2bg
 }

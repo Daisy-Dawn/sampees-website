@@ -4,7 +4,10 @@ import {
   milkFlavourBig,
   milkFlavourSmall,
   pineappleFlavour,
-  vanillaFlavour
+  vanillaFlavour,
+  milkSmall,
+  milksmall2,
+  milksmall2bg
 } from '../assets'
 import ProductWithIngredients from '../components/Product'
 
@@ -23,7 +26,7 @@ const FlavourProducts = () => {
       bg: '#F8F9FA',
       productImages: {
         big: milkFlavourBig,
-        small: milkFlavourSmall
+        small: milksmall2bg
       }
     },
     {
