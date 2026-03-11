@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  milkproduct1,
   vanillalabel,
   milklabel,
   milksmall3,
@@ -37,7 +36,6 @@ const Products = () => {
       img5,
       img6,
       milksmall4,
-      milkproduct1,
       vanillalabel,
       milksmall3,
       milklabel,

@@ -9,7 +9,6 @@ import machine3 from "../assets/about/machine3.jpg";
 import machine4 from "../assets/about/machine4.jpg";
 import chinChinCarton from "../assets/products/chinChinCarton.png";
 import milklabel from "../assets/products/milklabel.png";
-import milkproduct1 from "../assets/products/milkproduct1.png";
 import vanillalabel from "../assets/products/vanillalabel.png";
 import logo from "../assets/logo.png";
 import building1 from "../assets/about/building1.png";
@@ -56,7 +55,6 @@ export {
   faqIcon,
   chinChinCarton,
   milklabel,
-  milkproduct1,
   vanillalabel,
   logo,
   building1,
